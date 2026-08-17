@@ -1,0 +1,1001 @@
+CustomerID,Tenure,PreferredLoginDevice,CityTier,WarehouseToHome,PreferredPaymentMode,Gender,HourSpendOnApp,NumberOfDeviceRegistered,PreferedOrderCat,SatisfactionScore,MaritalStatus,NumberOfAddress,Complain,OrderAmountHikeFromlastYear,CouponUsed,OrderCount,DaySinceLastOrder,CashbackAmount
+C000001,39,Mobile Phone,2,27,UPI,Female,5,3,Mobile Phone,2,Married,3,1,14,1,4,12,215
+C000002,52,Mobile Phone,1,13,E wallet,Male,1,6,Others,2,Married,6,0,23,9,7,21,350
+C000003,29,Mobile Phone,3,38,Debit Card,Female,2,4,Grocery,2,Married,7,0,28,0,12,15,431
+C000004,15,Mobile Phone,1,50,Credit Card,Female,4,6,Fashion,2,Single,2,0,20,9,9,6,484
+C000005,43,Mobile Phone,2,18,E wallet,Male,4,2,Mobile Phone,1,Divorced,6,0,19,3,9,7,475
+C000006,8,Computer,1,8,E wallet,Male,1,6,Mobile Phone,3,Married,5,0,22,9,12,5,329
+C000007,21,Mobile Phone,1,34,Debit Card,Female,5,3,Others,2,Single,1,0,16,9,10,23,420
+C000008,39,Computer,2,35,E wallet,Female,2,4,Others,4,Single,6,0,5,10,15,6,207
+C000009,58,Tablet,2,42,E wallet,Male,1,2,Laptop & Accessory,5,Married,5,0,14,7,1,17,470
+C000010,19,Mobile Phone,2,15,E wallet,Female,5,3,Laptop & Accessory,5,Single,6,0,7,1,5,29,298
+C000011,23,Computer,3,39,Credit Card,Male,2,1,Laptop & Accessory,4,Single,3,0,6,10,7,21,428
+C000012,11,Mobile Phone,2,12,Debit Card,Female,4,5,Others,2,Married,3,0,1,7,13,24,230
+C000013,11,Mobile Phone,1,7,E wallet,Female,2,2,Laptop & Accessory,1,Single,3,0,29,0,7,27,240
+C000014,24,Mobile Phone,1,18,E wallet,Male,3,4,Laptop & Accessory,3,Single,3,0,12,0,10,21,188
+C000015,53,Computer,3,17,Credit Card,Male,2,6,Fashion,5,Single,2,0,29,3,6,19,127
+C000016,36,Mobile Phone,3,49,Debit Card,Male,3,6,Laptop & Accessory,3,Single,3,0,22,6,11,6,456
+C000017,40,Computer,2,36,UPI,Female,2,2,Mobile Phone,1,Married,7,1,28,8,10,2,422
+C000018,24,Computer,1,38,Credit Card,Female,3,4,Others,5,Married,3,0,5,4,4,4,385
+C000019,3,Mobile Phone,1,49,Debit Card,Female,4,2,Grocery,3,Single,7,0,28,1,3,0,99
+C000020,22,Tablet,2,23,E wallet,Female,5,4,Fashion,1,Single,2,0,4,6,12,14,134
+C000021,53,Mobile Phone,3,42,Debit Card,Male,3,6,Others,3,Married,3,0,19,10,13,25,232
+C000022,2,Mobile Phone,2,20,Debit Card,Female,3,3,Others,2,Single,5,0,0,1,9,2,232
+C000023,24,Mobile Phone,3,6,Debit Card,Female,4,1,Mobile Phone,1,Single,5,0,28,8,15,7,53
+C000024,44,Mobile Phone,3,44,UPI,Female,3,3,Laptop & Accessory,3,Single,4,0,17,8,12,24,487
+C000025,30,Computer,1,21,Debit Card,Male,1,1,Mobile Phone,2,Married,5,0,14,2,13,8,366
+C000026,38,Mobile Phone,2,38,UPI,Female,4,6,Laptop & Accessory,2,Married,1,0,22,7,10,14,160
+C000027,2,Mobile Phone,1,46,E wallet,Female,1,3,Laptop & Accessory,1,Married,1,0,9,10,4,9,383
+C000028,60,Computer,1,20,UPI,Male,4,3,Others,4,Married,1,0,2,3,8,1,388
+C000029,21,Mobile Phone,3,42,E wallet,Female,3,2,Laptop & Accessory,5,Married,2,0,4,2,13,19,300
+C000030,33,Mobile Phone,2,6,E wallet,Female,1,5,Fashion,1,Married,5,0,23,0,1,4,182
+C000031,12,Mobile Phone,2,6,UPI,Male,3,6,Fashion,2,Married,7,0,28,4,7,30,149
+C000032,58,Computer,1,30,Credit Card,Female,4,4,Fashion,2,Single,1,0,12,10,12,18,451
+C000033,22,Mobile Phone,1,17,Cash on Delivery,Female,3,6,Others,1,Married,4,0,7,3,6,12,221
+C000034,44,Computer,1,35,Debit Card,Female,1,4,Mobile Phone,4,Married,2,0,21,0,13,10,336
+C000035,25,Computer,1,38,Cash on Delivery,Male,1,4,Grocery,5,Married,4,1,20,9,12,0,168
+C000036,49,Mobile Phone,2,43,Debit Card,Female,3,1,Laptop & Accessory,3,Single,5,0,28,7,1,21,399
+C000037,27,Mobile Phone,1,7,Debit Card,Female,2,4,Grocery,1,Single,3,0,1,7,15,29,454
+C000038,59,Mobile Phone,2,12,E wallet,Male,4,4,Mobile Phone,5,Married,4,0,8,7,4,14,224
+C000039,42,Mobile Phone,1,27,Debit Card,Male,4,2,Mobile Phone,5,Married,3,0,16,2,12,25,79
+C000040,28,Mobile Phone,1,18,Debit Card,Female,3,3,Others,2,Married,2,0,26,5,15,17,104
+C000041,60,Mobile Phone,1,31,UPI,Female,2,6,Fashion,3,Single,4,0,17,6,14,15,410
+C000042,16,Mobile Phone,2,33,Cash on Delivery,Female,1,6,Fashion,1,Married,4,0,12,8,5,8,245
+C000043,15,Mobile Phone,2,43,UPI,Female,5,4,Mobile Phone,2,Married,6,1,0,4,11,0,90
+C000044,47,Mobile Phone,2,43,Debit Card,Male,5,5,Others,2,Married,2,0,11,8,8,10,222
+C000045,51,Mobile Phone,2,5,E wallet,Female,3,6,Others,4,Married,2,0,19,5,15,8,379
+C000046,44,Mobile Phone,2,21,UPI,Male,2,4,Laptop & Accessory,5,Married,1,1,19,9,4,22,268
+C000047,55,Mobile Phone,1,45,UPI,Male,2,1,Fashion,1,Married,5,0,20,9,3,10,257
+C000048,52,Mobile Phone,1,34,Credit Card,Female,4,1,Mobile Phone,1,Married,4,1,4,9,2,12,207
+C000049,57,Mobile Phone,3,17,Debit Card,Female,1,1,Grocery,1,Divorced,4,0,7,3,4,25,382
+C000050,3,Mobile Phone,2,25,E wallet,Male,2,4,Fashion,2,Single,7,0,26,0,11,1,277
+C000051,37,Computer,1,23,UPI,Male,5,2,Laptop & Accessory,4,Single,2,1,14,0,10,13,134
+C000052,51,Mobile Phone,3,23,UPI,Female,1,5,Others,3,Divorced,2,0,26,9,14,5,222
+C000053,7,Tablet,3,29,E wallet,Male,1,4,Mobile Phone,2,Married,5,0,2,4,13,7,294
+C000054,21,Mobile Phone,1,26,Debit Card,Female,3,2,Fashion,3,Married,2,0,5,2,4,30,409
+C000055,9,Mobile Phone,2,35,Credit Card,Female,2,2,Grocery,4,Married,3,0,27,4,13,17,222
+C000056,39,Computer,2,21,UPI,Male,3,6,Laptop & Accessory,5,Single,3,0,12,4,10,15,384
+C000057,18,Mobile Phone,2,27,Credit Card,Male,2,4,Laptop & Accessory,1,Married,6,0,11,0,5,30,261
+C000058,4,Mobile Phone,1,36,Cash on Delivery,Female,4,4,Fashion,3,Married,3,0,18,7,13,20,133
+C000059,25,Mobile Phone,1,14,Debit Card,Male,3,2,Grocery,2,Single,3,0,28,4,7,28,222
+C000060,60,Mobile Phone,2,14,Cash on Delivery,Female,3,2,Laptop & Accessory,3,Single,5,0,17,4,9,11,232
+C000061,14,Mobile Phone,2,40,Cash on Delivery,Female,5,2,Mobile Phone,5,Married,4,1,23,8,2,10,492
+C000062,50,Mobile Phone,3,12,Cash on Delivery,Female,3,6,Laptop & Accessory,1,Single,3,0,0,7,5,5,182
+C000063,58,Computer,2,24,Debit Card,Male,2,4,Grocery,3,Married,6,0,24,0,11,2,429
+C000064,9,Mobile Phone,1,36,Debit Card,Female,5,2,Others,5,Single,2,0,26,2,10,13,337
+C000065,26,Mobile Phone,2,18,E wallet,Female,3,1,Others,2,Married,3,0,6,6,9,27,311
+C000066,53,Mobile Phone,1,32,Credit Card,Female,3,4,Fashion,4,Divorced,6,0,11,0,12,1,399
+C000067,2,Mobile Phone,2,50,Credit Card,Female,4,6,Grocery,2,Married,5,0,9,0,14,30,331
+C000068,20,Mobile Phone,2,28,E wallet,Female,3,1,Laptop & Accessory,1,Single,7,1,28,4,13,10,342
+C000069,28,Mobile Phone,1,19,E wallet,Female,1,3,Laptop & Accessory,2,Married,7,1,30,8,3,21,318
+C000070,47,Mobile Phone,2,26,Cash on Delivery,Female,5,4,Others,2,Single,7,0,11,5,1,2,398
+C000071,60,Mobile Phone,1,34,E wallet,Female,1,3,Others,2,Single,2,0,10,9,2,17,246
+C000072,7,Mobile Phone,1,8,UPI,Female,5,2,Mobile Phone,2,Divorced,6,1,3,1,14,30,74
+C000073,44,Mobile Phone,1,17,Credit Card,Female,4,6,Others,1,Married,3,1,18,10,6,0,190
+C000074,8,Computer,1,27,E wallet,Female,3,2,Mobile Phone,5,Married,4,0,5,8,5,29,272
+C000075,47,Mobile Phone,3,12,UPI,Male,3,6,Laptop & Accessory,3,Single,2,1,24,5,1,23,69
+C000076,35,Mobile Phone,2,22,UPI,Female,3,5,Mobile Phone,4,Single,2,1,30,4,1,0,296
+C000077,14,Tablet,1,16,UPI,Female,5,2,Mobile Phone,3,Single,7,1,8,4,11,11,377
+C000078,17,Mobile Phone,2,35,UPI,Female,3,3,Fashion,3,Married,4,1,19,2,4,14,493
+C000079,36,Computer,1,18,Cash on Delivery,Male,1,6,Others,4,Married,7,0,9,5,12,4,250
+C000080,50,Mobile Phone,3,38,UPI,Female,3,2,Mobile Phone,1,Married,2,0,4,3,15,26,454
+C000081,40,Computer,2,22,Cash on Delivery,Male,4,4,Laptop & Accessory,4,Married,3,0,26,9,4,5,164
+C000082,4,Mobile Phone,3,38,Cash on Delivery,Female,1,6,Grocery,1,Single,7,0,12,1,15,15,432
+C000083,2,Computer,1,15,UPI,Female,3,6,Mobile Phone,3,Single,7,0,8,2,6,26,238
+C000084,6,Mobile Phone,2,45,Credit Card,Male,3,2,Others,1,Single,7,1,1,8,6,11,75
+C000085,54,Mobile Phone,2,16,UPI,Female,2,5,Fashion,5,Single,2,0,17,10,10,11,103
+C000086,42,Mobile Phone,3,19,UPI,Male,5,2,Laptop & Accessory,4,Single,3,0,20,10,14,2,219
+C000087,4,Mobile Phone,1,35,UPI,Male,1,3,Fashion,5,Divorced,4,0,0,8,6,29,444
+C000088,54,Computer,1,33,Credit Card,Female,2,3,Grocery,3,Single,1,0,23,5,1,22,470
+C000089,29,Computer,3,30,Debit Card,Female,4,6,Mobile Phone,4,Divorced,4,0,20,9,10,1,430
+C000090,18,Mobile Phone,2,22,Debit Card,Female,5,6,Mobile Phone,3,Single,3,0,11,9,9,6,60
+C000091,26,Computer,1,36,Cash on Delivery,Female,1,2,Others,5,Divorced,5,0,9,8,11,1,76
+C000092,44,Mobile Phone,1,26,Cash on Delivery,Male,3,3,Mobile Phone,3,Married,7,0,1,3,7,20,399
+C000093,34,Mobile Phone,3,42,Credit Card,Male,1,3,Laptop & Accessory,4,Divorced,4,0,27,10,7,6,132
+C000094,10,Mobile Phone,1,21,E wallet,Female,3,5,Grocery,4,Single,5,0,8,4,11,10,339
+C000095,36,Computer,2,27,Debit Card,Male,5,4,Fashion,3,Married,5,0,1,9,7,10,87
+C000096,14,Mobile Phone,3,28,Cash on Delivery,Male,3,5,Grocery,4,Divorced,3,0,22,5,2,13,494
+C000097,31,Mobile Phone,1,12,Debit Card,Female,4,1,Mobile Phone,4,Single,3,0,23,8,2,2,136
+C000098,48,Computer,2,45,Credit Card,Male,3,5,Fashion,3,Single,7,0,29,4,6,13,486
+C000099,15,Mobile Phone,1,10,Credit Card,Male,4,2,Others,5,Single,1,0,21,7,7,10,370
+C000100,8,Mobile Phone,1,9,E wallet,Female,5,4,Grocery,4,Divorced,6,0,13,10,3,3,436
+C000101,14,Mobile Phone,3,48,E wallet,Male,5,2,Fashion,4,Married,2,1,10,0,13,16,500
+C000102,23,Mobile Phone,3,33,Credit Card,Female,1,1,Fashion,4,Married,4,0,22,4,4,15,205
+C000103,60,Mobile Phone,2,32,Cash on Delivery,Male,4,4,Fashion,4,Single,3,0,10,9,14,2,447
+C000104,57,Mobile Phone,2,15,Debit Card,Female,4,6,Laptop & Accessory,3,Single,4,0,16,0,12,24,357
+C000105,40,Mobile Phone,1,5,UPI,Male,2,3,Grocery,5,Married,6,0,3,9,3,9,335
+C000106,21,Mobile Phone,1,47,E wallet,Male,2,5,Fashion,5,Single,6,0,12,5,7,20,235
+C000107,16,Mobile Phone,1,23,UPI,Female,2,2,Grocery,1,Married,7,1,6,6,7,30,231
+C000108,45,Computer,1,13,Cash on Delivery,Female,3,1,Fashion,4,Divorced,5,0,15,4,4,14,418
+C000109,18,Mobile Phone,1,31,E wallet,Female,2,3,Others,4,Single,7,0,0,0,13,7,192
+C000110,47,Mobile Phone,1,38,UPI,Female,4,5,Others,1,Married,2,0,12,5,7,17,471
+C000111,53,Mobile Phone,1,48,Cash on Delivery,Male,3,3,Others,5,Single,1,1,0,9,5,2,255
+C000112,24,Mobile Phone,1,8,Debit Card,Male,5,5,Mobile Phone,2,Married,4,0,10,4,1,6,191
+C000113,26,Mobile Phone,2,40,Cash on Delivery,Male,1,6,Fashion,2,Single,2,0,5,5,10,29,234
+C000114,25,Computer,3,22,E wallet,Female,2,4,Mobile Phone,5,Married,1,0,19,10,4,9,492
+C000115,60,Mobile Phone,1,19,Credit Card,Male,5,3,Grocery,4,Single,4,0,2,9,7,19,290
+C000116,60,Mobile Phone,3,17,Debit Card,Male,4,3,Mobile Phone,2,Married,2,1,11,6,13,8,57
+C000117,60,Mobile Phone,3,23,UPI,Female,1,3,Grocery,3,Married,3,0,30,6,15,13,121
+C000118,45,Mobile Phone,1,10,E wallet,Female,5,4,Grocery,3,Single,4,0,4,1,2,22,452
+C000119,41,Computer,3,16,Credit Card,Male,1,1,Grocery,1,Married,2,1,8,2,2,13,337
+C000120,29,Mobile Phone,2,41,Cash on Delivery,Female,2,5,Mobile Phone,5,Single,6,1,25,5,1,10,144
+C000121,15,Mobile Phone,2,21,Credit Card,Male,4,6,Fashion,5,Married,1,0,25,2,2,27,206
+C000122,45,Mobile Phone,1,27,E wallet,Male,1,3,Mobile Phone,2,Single,2,1,11,1,10,0,90
+C000123,1,Mobile Phone,2,30,E wallet,Female,5,4,Fashion,4,Married,3,0,29,3,14,3,380
+C000124,25,Computer,1,33,Credit Card,Male,2,1,Fashion,5,Single,7,0,29,4,8,25,350
+C000125,7,Mobile Phone,2,37,Cash on Delivery,Female,2,5,Grocery,2,Single,4,1,27,10,11,26,318
+C000126,9,Computer,2,31,Credit Card,Female,5,4,Mobile Phone,2,Single,4,0,26,9,8,5,204
+C000127,24,Mobile Phone,2,29,E wallet,Male,5,6,Fashion,5,Married,4,0,9,8,8,21,324
+C000128,1,Computer,2,14,E wallet,Male,1,6,Others,2,Single,3,0,18,2,15,25,203
+C000129,44,Mobile Phone,2,27,UPI,Male,3,5,Fashion,1,Married,1,0,4,2,1,21,102
+C000130,8,Mobile Phone,1,25,UPI,Female,2,3,Others,1,Married,4,0,25,5,1,4,228
+C000131,24,Mobile Phone,1,25,Debit Card,Male,1,6,Mobile Phone,5,Single,1,0,4,4,12,2,470
+C000132,11,Tablet,3,47,E wallet,Female,5,1,Mobile Phone,4,Married,2,0,8,5,10,1,289
+C000133,51,Computer,1,17,UPI,Female,1,4,Mobile Phone,1,Single,6,0,26,6,4,2,186
+C000134,17,Mobile Phone,1,41,Credit Card,Male,5,1,Fashion,1,Single,6,0,27,10,6,8,304
+C000135,8,Computer,1,37,Cash on Delivery,Female,4,3,Laptop & Accessory,5,Married,1,1,25,2,8,18,273
+C000136,35,Mobile Phone,1,28,Credit Card,Male,5,1,Fashion,3,Married,1,0,26,4,13,18,229
+C000137,35,Tablet,3,48,Cash on Delivery,Male,5,1,Fashion,2,Married,6,0,19,7,2,16,231
+C000138,33,Mobile Phone,2,15,UPI,Male,5,2,Grocery,1,Single,4,0,16,3,13,17,308
+C000139,59,Computer,3,21,Debit Card,Male,3,1,Grocery,3,Single,5,0,9,9,3,10,292
+C000140,5,Computer,2,8,Credit Card,Male,5,5,Fashion,4,Single,5,1,20,1,6,11,145
+C000141,42,Computer,2,29,Credit Card,Male,2,4,Others,3,Married,3,0,0,3,10,2,246
+C000142,39,Mobile Phone,1,34,Credit Card,Male,2,2,Grocery,5,Married,7,0,21,1,4,17,441
+C000143,58,Mobile Phone,2,13,Cash on Delivery,Female,1,4,Fashion,4,Married,6,0,27,2,12,23,63
+C000144,41,Computer,1,25,UPI,Male,3,4,Laptop & Accessory,4,Single,6,0,15,3,2,5,169
+C000145,28,Mobile Phone,3,24,Credit Card,Female,1,3,Others,3,Single,3,0,25,3,7,6,436
+C000146,7,Tablet,3,23,Credit Card,Female,2,3,Mobile Phone,5,Single,5,1,25,9,4,0,457
+C000147,9,Computer,1,23,Debit Card,Female,2,2,Fashion,1,Single,2,0,14,8,8,5,318
+C000148,8,Mobile Phone,3,16,Debit Card,Male,4,6,Fashion,3,Single,4,0,22,9,8,17,220
+C000149,12,Computer,3,41,UPI,Female,5,3,Others,1,Married,4,0,16,5,7,12,462
+C000150,34,Mobile Phone,2,46,UPI,Female,2,3,Grocery,3,Married,2,0,25,8,10,30,121
+C000151,33,Computer,1,21,E wallet,Male,1,3,Grocery,1,Married,2,0,19,3,9,21,228
+C000152,48,Computer,2,41,Debit Card,Male,1,4,Grocery,3,Married,5,0,24,8,4,18,219
+C000153,55,Mobile Phone,2,43,E wallet,Female,5,2,Mobile Phone,4,Single,3,0,12,10,7,6,208
+C000154,23,Mobile Phone,1,32,Cash on Delivery,Male,5,4,Others,2,Married,2,0,0,8,10,18,496
+C000155,24,Computer,1,45,E wallet,Male,4,5,Others,4,Single,3,0,24,5,10,8,203
+C000156,37,Mobile Phone,3,39,Credit Card,Male,3,4,Grocery,1,Divorced,7,0,7,4,15,2,451
+C000157,35,Mobile Phone,1,22,E wallet,Male,1,5,Grocery,5,Married,1,0,4,2,12,22,131
+C000158,44,Mobile Phone,2,18,UPI,Female,5,1,Laptop & Accessory,4,Single,4,0,5,4,1,11,106
+C000159,40,Mobile Phone,3,39,Cash on Delivery,Male,1,1,Laptop & Accessory,2,Divorced,5,1,22,2,4,19,56
+C000160,22,Mobile Phone,3,48,Credit Card,Male,5,5,Fashion,1,Single,4,1,19,4,2,23,161
+C000161,27,Mobile Phone,1,45,E wallet,Male,2,5,Fashion,4,Married,5,0,29,4,9,29,97
+C000162,35,Mobile Phone,3,11,Cash on Delivery,Female,1,4,Others,3,Married,1,0,13,1,5,17,129
+C000163,1,Mobile Phone,1,45,Cash on Delivery,Female,2,5,Others,5,Single,4,0,21,8,3,7,424
+C000164,35,Mobile Phone,1,17,Credit Card,Male,1,2,Mobile Phone,1,Single,1,0,22,6,4,8,425
+C000165,37,Mobile Phone,2,22,E wallet,Male,3,1,Mobile Phone,4,Married,5,1,10,5,6,12,365
+C000166,47,Mobile Phone,1,41,Cash on Delivery,Female,4,1,Laptop & Accessory,1,Married,2,0,30,4,10,7,82
+C000167,14,Mobile Phone,1,17,Cash on Delivery,Male,2,6,Fashion,3,Single,7,0,5,3,1,21,164
+C000168,3,Mobile Phone,2,40,Debit Card,Male,5,5,Laptop & Accessory,2,Divorced,4,0,10,7,7,9,433
+C000169,1,Mobile Phone,1,35,Cash on Delivery,Female,3,3,Laptop & Accessory,4,Single,1,0,12,1,8,16,52
+C000170,5,Computer,1,6,Debit Card,Male,1,3,Fashion,1,Single,6,0,30,7,7,6,53
+C000171,26,Mobile Phone,2,20,E wallet,Male,2,5,Mobile Phone,1,Single,4,1,11,0,7,16,405
+C000172,55,Computer,3,13,E wallet,Female,1,2,Fashion,1,Single,4,0,21,9,9,22,309
+C000173,14,Computer,2,13,E wallet,Female,1,3,Grocery,2,Single,4,0,1,0,13,29,91
+C000174,39,Mobile Phone,1,42,UPI,Male,1,6,Grocery,1,Divorced,3,0,20,2,4,17,58
+C000175,27,Computer,2,15,E wallet,Female,4,5,Grocery,5,Single,1,1,2,4,14,23,356
+C000176,9,Tablet,1,26,Cash on Delivery,Male,4,2,Others,5,Single,1,0,22,5,7,1,194
+C000177,15,Mobile Phone,1,37,Credit Card,Male,5,2,Mobile Phone,1,Single,4,0,3,3,9,2,450
+C000178,15,Mobile Phone,3,40,Debit Card,Male,2,4,Mobile Phone,5,Married,2,0,16,6,15,28,146
+C000179,26,Computer,1,49,UPI,Female,3,2,Others,4,Married,4,1,27,6,5,27,325
+C000180,42,Computer,1,27,E wallet,Female,3,3,Laptop & Accessory,5,Single,3,1,27,1,2,18,191
+C000181,60,Mobile Phone,2,49,E wallet,Male,3,3,Grocery,1,Single,5,0,21,1,15,0,327
+C000182,13,Computer,2,49,Credit Card,Male,1,5,Grocery,3,Single,3,0,5,1,5,20,485
+C000183,51,Computer,2,38,Credit Card,Female,4,5,Laptop & Accessory,4,Single,2,0,6,1,4,20,76
+C000184,32,Computer,1,13,UPI,Female,2,2,Fashion,2,Single,4,0,14,8,8,9,92
+C000185,39,Computer,1,28,Debit Card,Female,1,6,Fashion,1,Single,1,0,10,4,15,20,180
+C000186,49,Computer,1,12,E wallet,Male,4,1,Mobile Phone,2,Single,7,0,23,10,5,13,265
+C000187,52,Mobile Phone,1,11,UPI,Female,4,4,Others,3,Married,6,0,30,7,9,12,143
+C000188,32,Mobile Phone,2,40,Cash on Delivery,Female,2,1,Mobile Phone,2,Single,4,0,2,4,9,8,57
+C000189,4,Mobile Phone,3,22,Cash on Delivery,Male,2,2,Fashion,1,Divorced,2,0,29,10,3,5,135
+C000190,30,Computer,2,7,UPI,Male,2,2,Laptop & Accessory,1,Divorced,1,0,5,4,13,5,394
+C000191,37,Mobile Phone,3,32,E wallet,Male,1,1,Mobile Phone,3,Married,3,0,25,0,10,18,187
+C000192,23,Mobile Phone,2,10,UPI,Female,5,4,Grocery,1,Single,5,0,1,5,15,20,418
+C000193,39,Mobile Phone,2,48,E wallet,Male,2,1,Grocery,3,Single,5,0,28,3,6,9,462
+C000194,45,Mobile Phone,1,48,Credit Card,Male,5,5,Laptop & Accessory,3,Single,7,0,13,2,6,22,473
+C000195,15,Computer,2,25,UPI,Male,1,3,Fashion,1,Married,4,1,8,5,4,2,295
+C000196,43,Computer,2,32,E wallet,Male,5,6,Grocery,5,Married,3,0,17,1,11,17,498
+C000197,29,Mobile Phone,1,44,UPI,Female,3,5,Grocery,3,Married,7,0,18,7,13,20,70
+C000198,36,Mobile Phone,1,5,UPI,Male,5,3,Others,1,Divorced,6,0,11,0,10,18,457
+C000199,13,Mobile Phone,3,40,E wallet,Female,2,6,Mobile Phone,5,Single,6,0,30,8,3,4,493
+C000200,32,Mobile Phone,1,25,E wallet,Female,1,6,Fashion,3,Married,7,0,30,7,1,24,459
+C000201,7,Mobile Phone,1,47,Debit Card,Female,2,6,Mobile Phone,5,Single,2,0,12,0,12,10,314
+C000202,59,Mobile Phone,2,39,UPI,Male,3,2,Fashion,4,Single,5,0,25,9,7,9,197
+C000203,51,Mobile Phone,3,17,Cash on Delivery,Female,2,6,Grocery,4,Single,3,0,11,8,15,16,233
+C000204,22,Mobile Phone,2,14,UPI,Male,2,4,Others,5,Single,4,0,11,1,15,3,276
+C000205,28,Mobile Phone,2,48,UPI,Male,2,1,Mobile Phone,3,Married,1,0,17,2,5,25,341
+C000206,2,Mobile Phone,1,14,E wallet,Male,4,4,Grocery,1,Single,4,0,8,1,14,30,85
+C000207,42,Mobile Phone,2,50,UPI,Female,3,1,Fashion,2,Married,4,0,16,7,10,20,295
+C000208,45,Mobile Phone,1,17,UPI,Male,2,5,Mobile Phone,1,Married,3,1,20,1,15,17,122
+C000209,57,Computer,3,41,Cash on Delivery,Male,2,5,Mobile Phone,2,Married,5,0,15,9,7,27,199
+C000210,53,Mobile Phone,2,42,E wallet,Male,2,1,Grocery,2,Single,3,0,16,1,1,17,50
+C000211,6,Mobile Phone,1,28,UPI,Female,1,4,Mobile Phone,3,Married,1,0,20,0,8,0,118
+C000212,28,Computer,1,6,Credit Card,Female,4,1,Others,5,Married,7,1,23,6,3,13,342
+C000213,28,Mobile Phone,1,26,Debit Card,Female,1,6,Others,1,Single,3,0,7,1,7,7,279
+C000214,44,Computer,1,21,Cash on Delivery,Male,4,2,Grocery,5,Single,2,0,10,9,12,1,260
+C000215,44,Mobile Phone,1,40,UPI,Female,2,5,Fashion,4,Married,4,0,23,4,3,18,121
+C000216,20,Tablet,2,18,Credit Card,Male,3,2,Grocery,3,Married,5,0,1,4,14,14,412
+C000217,30,Computer,2,14,UPI,Male,5,6,Others,3,Married,6,1,7,2,3,27,145
+C000218,11,Computer,1,39,UPI,Female,5,6,Laptop & Accessory,4,Married,1,0,11,2,10,1,446
+C000219,58,Computer,1,29,E wallet,Male,2,5,Laptop & Accessory,1,Married,6,1,20,2,9,3,133
+C000220,55,Mobile Phone,1,7,E wallet,Female,1,5,Mobile Phone,4,Single,4,0,30,5,13,29,277
+C000221,28,Mobile Phone,3,42,E wallet,Male,3,6,Mobile Phone,1,Single,3,0,0,3,2,0,348
+C000222,25,Computer,1,21,Credit Card,Female,4,3,Laptop & Accessory,2,Single,6,0,22,2,14,18,285
+C000223,39,Mobile Phone,2,16,UPI,Male,2,2,Others,3,Married,2,0,12,1,4,20,342
+C000224,33,Computer,3,28,Debit Card,Male,3,2,Mobile Phone,1,Married,3,1,21,2,6,9,271
+C000225,1,Mobile Phone,2,33,Cash on Delivery,Male,3,3,Grocery,5,Single,4,0,20,3,14,0,272
+C000226,57,Mobile Phone,3,47,E wallet,Male,4,4,Grocery,5,Married,6,0,16,5,3,19,330
+C000227,27,Mobile Phone,1,29,E wallet,Male,3,2,Others,3,Single,7,1,13,3,12,21,270
+C000228,57,Mobile Phone,3,40,UPI,Female,1,1,Mobile Phone,4,Single,1,0,13,7,10,14,265
+C000229,52,Mobile Phone,1,30,UPI,Male,1,6,Grocery,4,Single,6,0,15,2,14,3,280
+C000230,13,Mobile Phone,1,42,Credit Card,Female,1,6,Mobile Phone,1,Single,7,0,16,2,10,6,454
+C000231,41,Mobile Phone,2,5,Credit Card,Female,3,3,Mobile Phone,4,Single,7,0,5,2,7,29,218
+C000232,3,Mobile Phone,3,24,E wallet,Female,1,2,Grocery,3,Single,6,0,25,7,7,6,378
+C000233,39,Mobile Phone,3,32,UPI,Male,4,4,Laptop & Accessory,1,Single,5,0,27,3,15,21,475
+C000234,6,Computer,1,20,Debit Card,Male,3,2,Grocery,2,Single,6,0,6,0,5,24,91
+C000235,8,Mobile Phone,1,21,Cash on Delivery,Male,5,6,Others,4,Married,4,0,25,1,3,17,307
+C000236,27,Mobile Phone,3,44,UPI,Female,3,5,Fashion,4,Single,7,0,25,9,2,12,245
+C000237,9,Mobile Phone,1,32,UPI,Male,4,1,Grocery,1,Divorced,1,1,0,1,15,9,441
+C000238,37,Computer,3,16,Credit Card,Male,5,3,Mobile Phone,5,Single,4,0,24,2,15,23,145
+C000239,33,Mobile Phone,3,31,Cash on Delivery,Female,3,5,Mobile Phone,4,Single,2,0,14,5,4,7,366
+C000240,51,Computer,2,46,E wallet,Female,1,4,Grocery,3,Single,3,0,19,7,14,26,63
+C000241,42,Tablet,1,34,UPI,Female,2,5,Fashion,4,Single,6,0,20,0,15,9,162
+C000242,44,Mobile Phone,2,45,E wallet,Female,2,5,Grocery,2,Married,5,0,17,8,13,13,126
+C000243,24,Mobile Phone,1,38,UPI,Female,1,4,Fashion,4,Single,1,0,29,0,4,13,326
+C000244,15,Mobile Phone,3,41,E wallet,Female,2,5,Fashion,5,Divorced,5,1,27,9,11,26,457
+C000245,59,Mobile Phone,2,10,Cash on Delivery,Male,2,3,Others,4,Married,5,0,25,1,8,19,483
+C000246,54,Mobile Phone,3,11,Credit Card,Female,1,6,Mobile Phone,1,Married,5,0,12,2,8,21,478
+C000247,32,Computer,1,36,Cash on Delivery,Male,1,2,Mobile Phone,4,Married,6,0,23,6,13,10,497
+C000248,32,Mobile Phone,3,36,Debit Card,Male,3,5,Fashion,5,Married,1,0,29,8,5,5,369
+C000249,24,Mobile Phone,2,29,Credit Card,Male,3,3,Mobile Phone,1,Single,1,0,1,2,13,20,459
+C000250,41,Mobile Phone,1,37,Cash on Delivery,Female,1,2,Laptop & Accessory,3,Married,7,1,18,7,6,29,209
+C000251,52,Computer,1,11,Debit Card,Male,4,2,Fashion,1,Single,5,0,14,8,8,0,362
+C000252,49,Mobile Phone,2,16,UPI,Female,2,5,Mobile Phone,2,Single,7,1,11,9,15,18,168
+C000253,49,Mobile Phone,2,20,UPI,Female,3,3,Laptop & Accessory,1,Married,7,0,14,6,1,6,486
+C000254,58,Computer,3,20,E wallet,Male,2,6,Others,3,Married,3,0,24,3,5,23,210
+C000255,52,Computer,1,47,Credit Card,Female,5,5,Mobile Phone,4,Married,6,0,17,3,4,17,357
+C000256,12,Mobile Phone,1,40,UPI,Male,1,4,Laptop & Accessory,1,Single,6,0,13,3,4,2,400
+C000257,39,Mobile Phone,2,17,Credit Card,Male,4,2,Grocery,1,Married,4,0,5,5,11,19,195
+C000258,2,Computer,1,11,UPI,Female,5,5,Grocery,1,Single,7,0,11,3,2,29,212
+C000259,3,Mobile Phone,2,40,E wallet,Male,5,2,Laptop & Accessory,1,Single,6,0,19,4,10,10,445
+C000260,49,Mobile Phone,3,13,Cash on Delivery,Male,5,3,Fashion,3,Single,5,0,22,8,1,4,228
+C000261,37,Mobile Phone,3,36,E wallet,Male,1,1,Fashion,5,Single,2,0,29,6,14,18,138
+C000262,49,Mobile Phone,3,15,Debit Card,Female,3,5,Mobile Phone,5,Single,5,1,29,7,15,20,272
+C000263,56,Computer,3,12,UPI,Male,1,6,Grocery,1,Married,1,0,5,4,6,23,315
+C000264,17,Computer,1,37,Debit Card,Female,3,5,Fashion,3,Married,6,0,25,4,7,23,288
+C000265,59,Mobile Phone,2,27,Debit Card,Female,5,2,Fashion,3,Single,6,0,29,10,5,29,357
+C000266,49,Mobile Phone,2,29,Credit Card,Male,5,3,Grocery,1,Married,4,0,8,6,15,1,83
+C000267,2,Mobile Phone,3,12,UPI,Male,4,4,Others,2,Married,7,0,29,10,8,21,420
+C000268,2,Mobile Phone,1,49,Debit Card,Female,3,6,Fashion,1,Married,2,0,24,7,9,3,500
+C000269,28,Computer,2,26,Cash on Delivery,Female,5,3,Laptop & Accessory,2,Married,6,0,25,8,11,24,216
+C000270,54,Mobile Phone,1,8,Debit Card,Male,2,5,Mobile Phone,1,Single,4,0,3,1,11,9,441
+C000271,23,Mobile Phone,2,44,Cash on Delivery,Male,4,4,Fashion,2,Married,4,0,16,2,2,1,174
+C000272,37,Mobile Phone,3,7,Credit Card,Female,1,3,Fashion,2,Married,2,0,1,1,11,7,273
+C000273,32,Mobile Phone,3,33,Debit Card,Female,4,1,Others,1,Single,5,0,15,9,13,0,462
+C000274,33,Mobile Phone,1,45,E wallet,Female,2,6,Laptop & Accessory,2,Single,5,0,23,6,4,26,199
+C000275,1,Computer,3,33,Credit Card,Female,3,2,Mobile Phone,4,Married,5,0,13,1,11,5,238
+C000276,19,Mobile Phone,2,38,Cash on Delivery,Female,1,3,Fashion,5,Single,3,0,25,1,9,10,92
+C000277,2,Computer,1,38,Credit Card,Male,1,3,Mobile Phone,3,Divorced,7,0,7,1,5,26,482
+C000278,53,Mobile Phone,1,32,Debit Card,Female,3,1,Grocery,2,Single,7,0,13,3,3,29,78
+C000279,44,Mobile Phone,1,17,UPI,Female,4,5,Fashion,2,Married,5,0,30,0,6,27,411
+C000280,26,Mobile Phone,1,19,UPI,Male,5,6,Fashion,3,Single,2,0,1,1,15,9,169
+C000281,32,Computer,3,27,Cash on Delivery,Male,4,6,Grocery,2,Married,3,0,15,2,3,12,386
+C000282,6,Computer,2,48,Cash on Delivery,Female,2,2,Others,3,Married,7,0,3,6,14,0,80
+C000283,32,Mobile Phone,3,30,UPI,Female,5,3,Fashion,1,Single,5,0,0,9,5,1,230
+C000284,55,Mobile Phone,1,8,Cash on Delivery,Male,4,4,Mobile Phone,4,Married,3,0,22,0,3,2,211
+C000285,4,Computer,1,30,Credit Card,Female,3,3,Laptop & Accessory,4,Single,2,0,19,5,6,8,177
+C000286,55,Mobile Phone,2,44,E wallet,Female,2,2,Mobile Phone,5,Single,5,0,26,2,12,4,304
+C000287,11,Mobile Phone,1,13,E wallet,Male,2,3,Others,2,Single,1,1,13,2,10,9,343
+C000288,56,Computer,2,9,Credit Card,Female,2,1,Laptop & Accessory,5,Married,6,0,7,3,5,9,490
+C000289,59,Mobile Phone,3,36,E wallet,Male,5,3,Mobile Phone,1,Single,2,0,24,3,14,11,406
+C000290,17,Mobile Phone,2,24,Debit Card,Male,1,3,Mobile Phone,4,Single,4,0,27,6,9,17,437
+C000291,38,Mobile Phone,2,15,Credit Card,Male,5,4,Grocery,1,Single,4,0,24,2,3,25,303
+C000292,24,Mobile Phone,1,19,Cash on Delivery,Male,4,1,Others,1,Married,2,0,2,7,6,20,179
+C000293,5,Mobile Phone,1,36,Credit Card,Female,1,1,Grocery,2,Married,4,0,4,7,8,20,61
+C000294,52,Computer,1,32,UPI,Male,4,3,Laptop & Accessory,1,Single,7,0,5,10,7,0,84
+C000295,34,Mobile Phone,2,26,Cash on Delivery,Female,1,6,Grocery,4,Single,2,1,21,6,6,2,247
+C000296,6,Mobile Phone,1,45,UPI,Female,5,4,Others,5,Divorced,1,1,25,1,14,4,297
+C000297,22,Mobile Phone,1,21,Cash on Delivery,Female,2,3,Fashion,4,Single,2,0,7,4,15,24,159
+C000298,11,Mobile Phone,2,30,E wallet,Female,3,3,Fashion,2,Married,5,1,5,5,2,25,377
+C000299,48,Tablet,1,48,Credit Card,Female,2,2,Laptop & Accessory,4,Married,5,0,5,9,15,16,454
+C000300,16,Mobile Phone,1,11,Debit Card,Male,5,2,Fashion,3,Married,3,0,3,3,7,7,294
+C000301,33,Mobile Phone,1,46,Cash on Delivery,Male,1,6,Grocery,5,Single,4,0,6,9,8,16,299
+C000302,9,Computer,3,30,Cash on Delivery,Male,2,4,Laptop & Accessory,3,Married,6,0,29,4,1,8,415
+C000303,60,Mobile Phone,2,29,UPI,Male,5,5,Others,3,Married,4,0,29,8,15,5,366
+C000304,59,Mobile Phone,2,14,E wallet,Female,4,2,Laptop & Accessory,2,Married,7,1,23,10,9,16,212
+C000305,6,Mobile Phone,1,49,UPI,Male,3,5,Laptop & Accessory,1,Single,2,0,18,6,4,7,97
+C000306,16,Mobile Phone,3,23,UPI,Female,2,1,Mobile Phone,3,Single,6,0,6,1,8,20,448
+C000307,29,Mobile Phone,2,15,E wallet,Female,1,2,Mobile Phone,4,Single,6,1,2,10,15,6,120
+C000308,3,Mobile Phone,1,17,Debit Card,Male,4,2,Laptop & Accessory,1,Married,4,0,7,0,10,6,448
+C000309,20,Computer,3,12,UPI,Male,5,4,Fashion,4,Married,6,0,0,1,7,14,183
+C000310,60,Mobile Phone,1,44,UPI,Male,3,6,Mobile Phone,4,Single,6,0,0,2,14,6,288
+C000311,59,Mobile Phone,2,8,Cash on Delivery,Male,1,5,Others,1,Married,5,0,13,10,13,21,117
+C000312,36,Mobile Phone,2,35,E wallet,Female,5,2,Grocery,1,Single,1,0,5,1,10,26,327
+C000313,19,Mobile Phone,1,32,Credit Card,Female,5,2,Mobile Phone,4,Married,2,0,9,10,7,7,81
+C000314,26,Computer,3,15,Debit Card,Male,2,4,Laptop & Accessory,2,Divorced,4,0,24,2,2,8,172
+C000315,3,Mobile Phone,2,47,Debit Card,Female,2,4,Fashion,5,Single,5,1,27,9,1,27,71
+C000316,19,Mobile Phone,2,5,E wallet,Female,1,6,Grocery,5,Single,7,1,13,10,4,14,204
+C000317,20,Computer,1,42,Cash on Delivery,Female,5,5,Mobile Phone,2,Single,7,0,3,10,12,1,159
+C000318,32,Mobile Phone,1,28,Cash on Delivery,Male,2,1,Fashion,1,Married,3,0,5,8,2,6,320
+C000319,7,Mobile Phone,1,35,E wallet,Female,3,6,Fashion,4,Married,6,0,15,3,8,14,429
+C000320,52,Mobile Phone,3,45,Cash on Delivery,Male,3,1,Fashion,5,Divorced,6,1,27,8,10,17,349
+C000321,41,Mobile Phone,1,50,Debit Card,Male,5,3,Laptop & Accessory,4,Single,4,0,20,10,7,21,164
+C000322,33,Computer,2,30,Debit Card,Female,2,2,Others,2,Divorced,1,0,27,2,8,17,269
+C000323,40,Mobile Phone,2,9,Credit Card,Female,1,5,Fashion,4,Single,1,0,30,0,11,9,279
+C000324,39,Mobile Phone,1,24,E wallet,Male,1,6,Grocery,2,Married,4,1,0,10,6,21,301
+C000325,18,Mobile Phone,2,45,UPI,Female,1,2,Mobile Phone,1,Single,4,0,5,4,1,17,298
+C000326,40,Computer,1,15,UPI,Female,3,5,Grocery,2,Married,5,0,8,9,14,0,58
+C000327,1,Mobile Phone,3,37,Credit Card,Male,2,5,Laptop & Accessory,2,Married,7,0,30,9,13,6,83
+C000328,11,Computer,2,42,Credit Card,Male,2,5,Laptop & Accessory,5,Married,4,0,14,1,13,2,277
+C000329,28,Mobile Phone,1,31,Cash on Delivery,Male,3,2,Grocery,4,Married,7,0,11,3,12,13,122
+C000330,57,Computer,1,38,Credit Card,Male,1,6,Others,5,Single,3,0,2,1,9,11,448
+C000331,25,Tablet,2,19,Credit Card,Female,1,4,Laptop & Accessory,3,Single,7,0,10,1,6,13,495
+C000332,50,Computer,3,36,UPI,Female,5,2,Laptop & Accessory,2,Married,5,0,14,2,12,28,350
+C000333,23,Computer,2,25,Cash on Delivery,Male,4,5,Grocery,3,Single,6,0,2,4,13,3,261
+C000334,31,Mobile Phone,2,50,Credit Card,Male,2,6,Laptop & Accessory,5,Single,6,0,13,3,10,12,121
+C000335,30,Mobile Phone,1,9,Credit Card,Male,2,3,Others,4,Married,7,0,1,1,1,15,107
+C000336,42,Mobile Phone,1,10,Cash on Delivery,Female,2,1,Others,5,Married,6,0,28,10,1,15,269
+C000337,35,Mobile Phone,1,42,E wallet,Male,4,5,Others,4,Single,6,0,3,9,8,21,420
+C000338,7,Mobile Phone,2,26,Cash on Delivery,Female,5,3,Mobile Phone,4,Single,2,0,25,1,6,4,324
+C000339,60,Mobile Phone,3,22,UPI,Male,4,4,Others,1,Single,3,0,18,5,8,19,298
+C000340,16,Mobile Phone,2,18,E wallet,Male,1,5,Others,2,Single,5,0,11,6,8,24,65
+C000341,26,Mobile Phone,1,14,Debit Card,Male,1,3,Mobile Phone,5,Married,5,0,1,9,15,5,124
+C000342,48,Computer,2,50,Cash on Delivery,Female,2,5,Fashion,4,Divorced,6,1,16,5,11,5,155
+C000343,57,Mobile Phone,3,17,UPI,Female,3,2,Laptop & Accessory,5,Married,1,0,2,6,14,17,185
+C000344,52,Computer,2,35,E wallet,Female,2,6,Others,5,Single,5,0,9,0,8,5,466
+C000345,60,Computer,3,34,Cash on Delivery,Male,3,3,Laptop & Accessory,4,Divorced,3,0,15,5,10,6,123
+C000346,49,Tablet,1,7,Credit Card,Female,4,6,Grocery,3,Married,4,0,21,10,15,23,303
+C000347,2,Mobile Phone,1,34,Cash on Delivery,Female,1,2,Laptop & Accessory,2,Single,3,1,8,2,7,30,67
+C000348,1,Computer,3,10,Debit Card,Male,3,2,Mobile Phone,2,Divorced,6,0,10,0,7,29,468
+C000349,48,Tablet,2,33,Cash on Delivery,Male,4,6,Laptop & Accessory,1,Married,6,0,20,7,10,23,92
+C000350,12,Computer,1,12,E wallet,Female,1,3,Laptop & Accessory,1,Married,2,0,14,3,4,15,99
+C000351,5,Mobile Phone,2,48,E wallet,Female,3,6,Laptop & Accessory,1,Married,7,0,2,9,9,8,52
+C000352,37,Mobile Phone,3,49,Cash on Delivery,Female,2,6,Fashion,2,Single,5,0,15,7,12,25,281
+C000353,32,Mobile Phone,2,47,E wallet,Female,2,1,Fashion,3,Single,7,1,29,9,2,26,268
+C000354,59,Mobile Phone,2,48,Credit Card,Male,2,3,Grocery,2,Married,7,1,20,10,11,12,108
+C000355,55,Mobile Phone,1,37,Cash on Delivery,Male,4,1,Mobile Phone,2,Single,5,0,20,3,9,11,333
+C000356,9,Computer,2,21,Credit Card,Male,2,5,Laptop & Accessory,2,Single,5,0,20,3,10,18,351
+C000357,41,Computer,2,15,Credit Card,Female,5,6,Laptop & Accessory,2,Married,6,0,27,9,3,25,113
+C000358,35,Mobile Phone,3,17,UPI,Female,1,5,Laptop & Accessory,3,Married,5,0,11,3,14,30,119
+C000359,19,Computer,3,15,Cash on Delivery,Male,4,3,Laptop & Accessory,1,Married,1,0,22,5,13,22,352
+C000360,48,Mobile Phone,3,35,E wallet,Male,2,6,Fashion,5,Married,1,0,4,8,15,22,191
+C000361,16,Computer,1,32,Credit Card,Female,1,5,Grocery,1,Married,4,1,6,4,2,0,440
+C000362,3,Computer,2,48,UPI,Female,3,4,Others,1,Married,5,0,8,9,13,7,251
+C000363,20,Mobile Phone,3,10,Cash on Delivery,Male,2,2,Mobile Phone,5,Single,2,0,20,7,4,30,256
+C000364,24,Mobile Phone,2,45,Cash on Delivery,Male,1,6,Laptop & Accessory,2,Single,4,1,17,7,5,3,464
+C000365,54,Computer,3,20,Debit Card,Male,5,2,Grocery,3,Single,6,0,20,3,2,20,270
+C000366,56,Mobile Phone,3,8,Debit Card,Female,3,1,Others,3,Single,5,0,7,10,13,29,411
+C000367,33,Mobile Phone,2,39,Credit Card,Female,5,5,Grocery,1,Single,1,0,11,9,15,21,295
+C000368,24,Computer,2,30,Debit Card,Female,1,1,Fashion,5,Single,2,0,19,8,1,18,130
+C000369,52,Mobile Phone,1,16,Credit Card,Female,5,6,Others,4,Married,4,0,1,8,10,20,300
+C000370,11,Computer,1,15,E wallet,Female,1,2,Grocery,2,Divorced,2,0,9,4,11,25,100
+C000371,49,Mobile Phone,2,41,Credit Card,Female,1,2,Fashion,1,Single,5,0,18,5,5,4,334
+C000372,8,Computer,3,29,Debit Card,Male,5,5,Grocery,3,Married,3,0,8,4,9,16,418
+C000373,36,Mobile Phone,1,22,E wallet,Male,1,6,Grocery,5,Married,2,1,24,2,15,2,448
+C000374,38,Tablet,1,23,Debit Card,Female,2,4,Others,5,Single,2,0,23,10,12,18,433
+C000375,40,Computer,2,27,Credit Card,Male,1,4,Fashion,1,Divorced,6,0,7,7,12,0,395
+C000376,20,Mobile Phone,1,42,UPI,Female,4,5,Laptop & Accessory,4,Married,1,0,23,8,15,28,253
+C000377,35,Mobile Phone,1,22,Cash on Delivery,Male,1,6,Mobile Phone,3,Single,5,0,23,3,5,22,74
+C000378,48,Tablet,1,30,Debit Card,Female,4,5,Others,1,Married,2,0,23,8,12,0,494
+C000379,25,Mobile Phone,1,10,Credit Card,Male,1,6,Fashion,4,Single,5,0,0,8,11,22,90
+C000380,35,Mobile Phone,1,8,E wallet,Male,1,1,Grocery,5,Married,1,0,5,6,10,19,118
+C000381,25,Mobile Phone,1,48,Debit Card,Female,5,5,Fashion,2,Single,6,0,11,7,9,8,53
+C000382,29,Mobile Phone,2,33,Debit Card,Female,2,6,Mobile Phone,3,Married,5,0,24,2,14,22,289
+C000383,18,Computer,3,38,Cash on Delivery,Male,2,4,Mobile Phone,3,Single,7,0,23,4,13,4,410
+C000384,46,Mobile Phone,2,21,Credit Card,Male,3,6,Laptop & Accessory,4,Married,1,0,18,2,12,6,490
+C000385,18,Mobile Phone,2,47,UPI,Female,5,6,Laptop & Accessory,1,Single,1,0,26,6,10,24,80
+C000386,2,Mobile Phone,1,47,E wallet,Male,5,5,Mobile Phone,5,Married,4,0,16,5,6,25,436
+C000387,54,Mobile Phone,1,20,Credit Card,Female,2,1,Others,4,Married,6,0,1,10,3,5,166
+C000388,35,Mobile Phone,2,6,E wallet,Female,5,1,Others,2,Married,6,0,10,2,4,16,244
+C000389,16,Mobile Phone,1,38,Debit Card,Male,2,1,Grocery,2,Married,7,1,30,8,4,21,139
+C000390,41,Computer,2,12,Cash on Delivery,Female,5,1,Laptop & Accessory,2,Married,5,0,17,0,1,16,227
+C000391,36,Mobile Phone,2,17,Cash on Delivery,Male,1,3,Grocery,4,Married,3,0,22,9,3,12,194
+C000392,33,Mobile Phone,2,46,UPI,Male,2,5,Laptop & Accessory,5,Married,7,0,27,2,3,11,493
+C000393,4,Computer,1,12,Cash on Delivery,Female,2,2,Mobile Phone,3,Married,4,1,21,10,13,3,251
+C000394,33,Mobile Phone,1,34,Debit Card,Male,4,5,Others,1,Married,6,0,10,9,14,29,371
+C000395,14,Computer,2,36,UPI,Female,5,3,Others,3,Single,1,0,17,10,1,7,393
+C000396,21,Mobile Phone,1,40,Credit Card,Female,5,1,Mobile Phone,5,Single,6,0,7,6,13,4,252
+C000397,48,Mobile Phone,2,34,Cash on Delivery,Female,2,3,Grocery,3,Single,7,0,14,2,9,30,73
+C000398,20,Mobile Phone,2,5,UPI,Male,1,4,Grocery,4,Married,3,0,8,2,11,4,404
+C000399,56,Mobile Phone,3,47,Debit Card,Female,1,4,Fashion,2,Single,2,1,14,1,1,12,465
+C000400,8,Computer,1,43,E wallet,Male,1,5,Laptop & Accessory,5,Married,2,0,6,8,9,25,154
+C000401,7,Mobile Phone,3,21,E wallet,Female,5,5,Grocery,5,Married,6,0,19,10,1,10,324
+C000402,3,Mobile Phone,2,24,Debit Card,Female,4,2,Mobile Phone,3,Single,6,0,12,3,2,7,371
+C000403,17,Mobile Phone,1,28,Debit Card,Female,2,2,Grocery,4,Married,4,1,12,9,2,7,109
+C000404,33,Mobile Phone,1,26,E wallet,Male,3,4,Others,3,Single,6,0,0,5,14,0,420
+C000405,48,Computer,2,33,UPI,Male,4,1,Laptop & Accessory,3,Single,3,0,19,1,6,12,499
+C000406,12,Mobile Phone,1,26,E wallet,Female,3,3,Fashion,5,Married,6,0,3,8,7,28,64
+C000407,59,Mobile Phone,1,48,Debit Card,Female,4,2,Laptop & Accessory,3,Single,5,1,23,6,11,4,134
+C000408,51,Mobile Phone,1,13,Cash on Delivery,Male,1,6,Others,2,Single,7,1,3,9,1,27,468
+C000409,22,Mobile Phone,3,41,Credit Card,Male,5,2,Others,3,Married,3,0,3,4,3,20,246
+C000410,55,Computer,3,14,Cash on Delivery,Male,3,1,Others,2,Single,4,0,12,6,2,7,284
+C000411,22,Mobile Phone,2,40,Cash on Delivery,Female,4,1,Others,5,Divorced,5,0,1,3,8,16,460
+C000412,46,Computer,1,41,Debit Card,Male,5,5,Mobile Phone,4,Divorced,5,1,27,9,9,22,393
+C000413,30,Mobile Phone,1,32,E wallet,Female,3,3,Fashion,2,Single,7,0,25,6,13,22,312
+C000414,38,Mobile Phone,2,32,UPI,Male,2,1,Others,4,Single,2,0,22,1,2,12,55
+C000415,38,Tablet,2,46,Cash on Delivery,Female,4,2,Others,4,Married,3,0,14,6,2,8,430
+C000416,45,Mobile Phone,1,47,E wallet,Female,2,2,Grocery,2,Married,7,1,3,3,10,1,338
+C000417,51,Mobile Phone,2,25,UPI,Female,1,4,Fashion,5,Single,5,0,26,3,15,30,107
+C000418,54,Computer,3,28,Cash on Delivery,Male,2,1,Laptop & Accessory,1,Married,4,0,5,0,9,18,482
+C000419,8,Mobile Phone,2,46,UPI,Male,2,6,Fashion,4,Single,7,1,2,2,14,19,194
+C000420,27,Computer,2,44,E wallet,Male,4,5,Fashion,4,Married,2,0,6,4,4,16,415
+C000421,27,Mobile Phone,3,6,Credit Card,Female,1,3,Fashion,5,Single,5,0,5,4,5,30,91
+C000422,34,Computer,1,12,E wallet,Female,2,6,Others,5,Single,7,1,2,1,13,6,399
+C000423,21,Computer,2,31,Debit Card,Male,5,5,Others,3,Single,3,1,3,3,11,29,249
+C000424,30,Mobile Phone,3,26,UPI,Female,3,2,Mobile Phone,5,Divorced,2,1,9,0,9,25,473
+C000425,33,Computer,1,41,Credit Card,Female,2,6,Laptop & Accessory,4,Married,3,0,29,8,6,2,223
+C000426,28,Mobile Phone,2,31,UPI,Female,1,5,Grocery,2,Married,3,0,20,0,10,18,434
+C000427,47,Tablet,2,33,UPI,Male,2,2,Fashion,1,Single,3,1,8,5,12,18,384
+C000428,33,Mobile Phone,2,7,Cash on Delivery,Female,3,2,Laptop & Accessory,3,Single,7,0,29,6,9,23,144
+C000429,5,Mobile Phone,2,48,Debit Card,Male,1,2,Laptop & Accessory,2,Single,2,1,5,2,9,8,266
+C000430,60,Mobile Phone,3,17,UPI,Male,4,2,Mobile Phone,1,Married,7,1,28,0,7,9,160
+C000431,48,Mobile Phone,3,49,E wallet,Male,1,2,Grocery,1,Married,7,0,19,6,14,28,402
+C000432,19,Mobile Phone,1,14,E wallet,Male,4,4,Fashion,1,Married,7,1,26,2,12,13,229
+C000433,4,Computer,3,40,Cash on Delivery,Male,1,6,Grocery,2,Single,5,0,10,9,10,17,212
+C000434,35,Computer,1,13,Debit Card,Female,3,5,Mobile Phone,3,Divorced,6,0,6,5,9,25,168
+C000435,49,Tablet,1,31,Debit Card,Male,3,4,Others,3,Single,1,0,17,5,5,14,374
+C000436,17,Mobile Phone,2,38,E wallet,Male,1,4,Laptop & Accessory,1,Divorced,5,0,3,3,5,25,438
+C000437,44,Mobile Phone,2,5,Credit Card,Male,2,1,Fashion,2,Single,2,0,4,10,12,0,277
+C000438,28,Mobile Phone,2,36,Cash on Delivery,Female,3,1,Others,1,Married,1,0,3,5,8,29,194
+C000439,30,Mobile Phone,3,29,Cash on Delivery,Female,4,1,Mobile Phone,5,Single,1,0,3,10,10,24,486
+C000440,29,Mobile Phone,2,33,E wallet,Female,4,3,Grocery,3,Single,1,1,26,9,4,5,357
+C000441,46,Mobile Phone,2,11,E wallet,Female,5,1,Laptop & Accessory,4,Married,6,1,12,3,9,29,191
+C000442,53,Computer,1,7,Credit Card,Male,4,5,Fashion,1,Single,7,0,15,7,7,14,171
+C000443,6,Mobile Phone,3,24,Credit Card,Male,5,4,Others,5,Single,4,0,24,8,7,24,334
+C000444,35,Mobile Phone,3,24,Debit Card,Female,1,5,Others,3,Married,2,0,13,1,13,5,441
+C000445,60,Mobile Phone,3,34,Cash on Delivery,Female,1,6,Laptop & Accessory,2,Married,6,1,10,6,15,17,275
+C000446,41,Mobile Phone,1,39,Cash on Delivery,Female,1,1,Grocery,3,Married,6,0,28,8,3,0,409
+C000447,37,Mobile Phone,1,39,E wallet,Female,2,3,Mobile Phone,2,Single,4,0,1,8,4,29,306
+C000448,24,Tablet,1,43,Debit Card,Male,2,6,Grocery,2,Married,1,1,21,4,7,23,334
+C000449,29,Mobile Phone,1,31,Cash on Delivery,Female,5,3,Grocery,1,Married,7,0,13,0,11,2,469
+C000450,49,Mobile Phone,1,30,Debit Card,Female,4,6,Grocery,1,Single,4,1,23,5,11,16,484
+C000451,46,Mobile Phone,3,18,Debit Card,Female,4,4,Laptop & Accessory,3,Married,4,1,23,7,14,30,214
+C000452,53,Computer,2,21,E wallet,Female,1,5,Laptop & Accessory,5,Single,6,1,26,0,5,15,270
+C000453,31,Tablet,1,22,Debit Card,Female,3,2,Mobile Phone,3,Single,2,0,6,1,12,7,118
+C000454,35,Computer,1,49,Credit Card,Female,2,5,Grocery,4,Single,3,0,25,0,3,27,358
+C000455,60,Mobile Phone,1,33,Credit Card,Female,2,1,Laptop & Accessory,2,Single,7,1,10,4,1,16,273
+C000456,33,Mobile Phone,1,24,UPI,Male,1,2,Mobile Phone,2,Married,4,0,3,1,7,7,173
+C000457,52,Mobile Phone,1,31,E wallet,Male,2,3,Mobile Phone,1,Married,7,0,6,9,6,16,485
+C000458,21,Tablet,1,22,UPI,Male,1,4,Grocery,5,Divorced,4,0,28,9,10,24,393
+C000459,32,Computer,3,8,Credit Card,Male,5,4,Fashion,1,Married,1,0,15,3,15,29,388
+C000460,23,Mobile Phone,3,5,UPI,Male,4,3,Grocery,4,Single,7,0,25,0,7,8,61
+C000461,33,Computer,1,5,E wallet,Male,3,1,Fashion,3,Married,1,0,5,6,15,11,101
+C000462,3,Computer,2,30,E wallet,Female,4,3,Mobile Phone,3,Married,6,0,26,7,14,28,178
+C000463,18,Mobile Phone,3,49,Debit Card,Female,4,6,Laptop & Accessory,5,Single,1,0,5,4,2,24,184
+C000464,25,Tablet,1,24,Cash on Delivery,Male,5,1,Others,1,Married,7,0,1,1,13,18,194
+C000465,42,Computer,1,27,Debit Card,Female,2,2,Mobile Phone,1,Divorced,5,0,23,7,12,3,176
+C000466,31,Mobile Phone,3,14,E wallet,Male,3,3,Laptop & Accessory,4,Married,7,0,7,0,4,20,275
+C000467,54,Mobile Phone,1,15,Credit Card,Female,2,1,Mobile Phone,3,Divorced,4,0,29,6,2,21,476
+C000468,58,Mobile Phone,2,45,Credit Card,Female,4,2,Grocery,1,Single,1,0,26,0,8,24,120
+C000469,3,Mobile Phone,2,45,Debit Card,Female,1,3,Fashion,5,Single,2,0,6,5,7,28,322
+C000470,40,Mobile Phone,1,9,E wallet,Female,4,4,Mobile Phone,3,Single,5,0,26,5,1,10,236
+C000471,46,Mobile Phone,1,5,Credit Card,Female,2,3,Laptop & Accessory,4,Married,6,0,24,4,2,27,52
+C000472,24,Tablet,3,21,E wallet,Female,4,5,Grocery,5,Married,3,0,23,1,2,3,334
+C000473,50,Mobile Phone,1,26,Credit Card,Male,1,3,Others,2,Divorced,4,0,13,1,4,13,71
+C000474,32,Mobile Phone,1,38,E wallet,Male,5,5,Grocery,4,Single,4,0,8,8,3,13,215
+C000475,47,Mobile Phone,2,49,UPI,Female,2,2,Fashion,5,Single,2,0,14,4,1,5,359
+C000476,22,Mobile Phone,2,45,E wallet,Male,4,3,Grocery,1,Married,3,1,24,4,12,28,412
+C000477,23,Computer,1,33,E wallet,Female,2,2,Others,2,Married,3,0,21,6,14,16,483
+C000478,2,Mobile Phone,3,8,Debit Card,Male,5,2,Laptop & Accessory,4,Single,6,1,17,5,2,1,295
+C000479,27,Mobile Phone,1,9,UPI,Female,4,1,Mobile Phone,1,Married,6,0,11,1,11,7,283
+C000480,42,Mobile Phone,3,15,Cash on Delivery,Male,4,2,Fashion,2,Married,5,0,22,10,9,3,374
+C000481,2,Computer,3,25,Debit Card,Female,2,2,Others,3,Married,4,0,18,0,13,9,207
+C000482,26,Computer,2,39,Cash on Delivery,Male,2,3,Fashion,1,Married,1,0,12,4,1,6,200
+C000483,17,Mobile Phone,2,16,Credit Card,Female,1,3,Grocery,5,Single,6,0,6,3,9,3,262
+C000484,40,Mobile Phone,3,30,Cash on Delivery,Male,5,4,Fashion,4,Divorced,2,0,24,2,7,15,425
+C000485,33,Mobile Phone,1,23,E wallet,Female,1,1,Others,2,Married,2,0,9,1,2,13,267
+C000486,9,Mobile Phone,2,49,Cash on Delivery,Female,4,2,Mobile Phone,1,Single,2,0,29,9,2,15,295
+C000487,43,Mobile Phone,1,11,Debit Card,Female,2,1,Mobile Phone,3,Single,7,0,9,1,5,24,352
+C000488,54,Mobile Phone,1,11,Debit Card,Male,4,5,Fashion,4,Married,6,0,1,3,13,8,454
+C000489,48,Mobile Phone,1,30,Cash on Delivery,Male,4,2,Laptop & Accessory,4,Single,6,1,13,1,5,3,325
+C000490,39,Mobile Phone,3,44,Debit Card,Male,3,1,Fashion,1,Single,2,0,12,3,4,28,200
+C000491,29,Computer,3,9,Debit Card,Female,3,4,Grocery,3,Married,6,0,21,2,12,30,245
+C000492,42,Mobile Phone,1,25,Cash on Delivery,Male,4,4,Mobile Phone,2,Single,7,0,28,8,10,23,454
+C000493,55,Mobile Phone,1,18,UPI,Female,2,2,Mobile Phone,1,Married,1,0,5,6,10,5,70
+C000494,26,Mobile Phone,2,8,UPI,Male,4,5,Mobile Phone,2,Single,1,0,8,10,13,0,306
+C000495,35,Mobile Phone,2,27,Credit Card,Male,3,4,Laptop & Accessory,4,Married,5,0,12,2,12,30,448
+C000496,50,Computer,1,46,Debit Card,Male,2,4,Laptop & Accessory,2,Single,4,0,8,7,3,6,66
+C000497,25,Mobile Phone,2,24,Cash on Delivery,Male,4,5,Others,3,Single,1,1,30,8,4,0,100
+C000498,24,Mobile Phone,2,19,Debit Card,Female,5,1,Fashion,5,Single,5,0,12,6,10,18,496
+C000499,13,Computer,3,49,E wallet,Male,5,4,Fashion,3,Divorced,3,1,4,5,4,7,319
+C000500,60,Mobile Phone,1,33,Debit Card,Male,4,3,Grocery,2,Married,4,1,13,3,2,30,364
+C000501,58,Mobile Phone,2,12,Debit Card,Female,2,6,Mobile Phone,1,Single,1,1,4,4,5,24,132
+C000502,7,Computer,2,45,UPI,Female,4,6,Laptop & Accessory,4,Married,7,0,8,7,15,2,355
+C000503,57,Mobile Phone,3,23,Cash on Delivery,Male,4,4,Grocery,5,Married,3,0,7,2,5,0,173
+C000504,36,Mobile Phone,2,43,Debit Card,Male,3,1,Grocery,1,Divorced,5,0,6,1,5,0,339
+C000505,45,Tablet,2,50,UPI,Female,5,1,Laptop & Accessory,1,Single,1,0,7,2,11,6,311
+C000506,20,Mobile Phone,1,32,Credit Card,Female,3,2,Fashion,3,Married,1,0,21,6,15,20,414
+C000507,1,Mobile Phone,3,50,UPI,Female,3,3,Mobile Phone,2,Single,6,0,2,7,11,12,98
+C000508,8,Mobile Phone,2,31,UPI,Male,4,1,Fashion,3,Single,3,0,22,0,10,29,55
+C000509,46,Computer,1,8,UPI,Male,3,5,Grocery,2,Divorced,1,0,23,6,1,0,166
+C000510,16,Mobile Phone,2,19,Debit Card,Male,5,3,Mobile Phone,3,Married,2,0,14,8,6,15,167
+C000511,14,Mobile Phone,1,39,Debit Card,Female,3,6,Others,1,Single,7,0,7,2,11,21,312
+C000512,12,Mobile Phone,1,41,Credit Card,Female,5,3,Grocery,4,Single,6,0,0,2,2,29,402
+C000513,51,Mobile Phone,3,5,E wallet,Female,3,5,Fashion,2,Married,6,0,6,7,7,21,484
+C000514,23,Mobile Phone,2,7,E wallet,Male,5,4,Fashion,5,Married,1,0,18,3,4,13,423
+C000515,15,Mobile Phone,2,28,E wallet,Female,3,5,Fashion,5,Single,7,0,1,7,15,3,178
+C000516,28,Mobile Phone,1,31,Credit Card,Male,3,5,Laptop & Accessory,1,Divorced,6,0,13,4,5,22,446
+C000517,34,Mobile Phone,3,44,E wallet,Female,2,4,Grocery,3,Single,4,0,17,2,5,22,220
+C000518,2,Mobile Phone,1,40,E wallet,Male,5,4,Mobile Phone,3,Single,3,0,29,3,5,11,76
+C000519,32,Mobile Phone,1,38,UPI,Male,5,4,Fashion,1,Divorced,4,0,14,3,2,24,248
+C000520,23,Mobile Phone,3,33,Debit Card,Female,5,4,Fashion,5,Single,5,0,13,7,5,11,421
+C000521,22,Mobile Phone,3,28,Debit Card,Male,1,4,Laptop & Accessory,5,Single,4,0,23,5,3,16,436
+C000522,51,Computer,2,28,UPI,Female,3,5,Mobile Phone,3,Married,7,0,24,6,4,20,363
+C000523,25,Mobile Phone,1,46,UPI,Male,5,2,Grocery,2,Married,2,0,18,8,13,14,394
+C000524,58,Mobile Phone,3,8,UPI,Female,1,2,Others,4,Single,6,0,29,5,2,9,146
+C000525,22,Mobile Phone,2,7,Debit Card,Female,2,1,Laptop & Accessory,2,Divorced,7,1,18,2,4,2,66
+C000526,58,Computer,3,38,E wallet,Male,5,2,Grocery,5,Married,6,0,21,2,13,22,222
+C000527,58,Computer,3,27,UPI,Female,5,6,Others,2,Single,2,1,26,10,9,19,150
+C000528,22,Mobile Phone,1,27,Credit Card,Male,1,2,Fashion,4,Married,6,0,25,2,8,19,235
+C000529,49,Mobile Phone,1,49,UPI,Female,3,5,Fashion,2,Single,4,0,16,9,13,28,233
+C000530,52,Computer,2,9,Cash on Delivery,Female,2,4,Mobile Phone,2,Single,5,0,21,1,14,11,487
+C000531,42,Mobile Phone,1,35,UPI,Female,5,4,Others,2,Married,1,0,27,0,15,0,264
+C000532,6,Mobile Phone,1,45,Debit Card,Female,3,5,Fashion,2,Divorced,2,0,18,10,11,0,300
+C000533,15,Mobile Phone,3,10,UPI,Male,2,6,Fashion,1,Single,4,0,26,9,12,9,265
+C000534,54,Mobile Phone,2,41,Cash on Delivery,Female,4,2,Mobile Phone,5,Single,7,0,15,0,3,17,78
+C000535,43,Tablet,3,14,Credit Card,Female,4,5,Grocery,4,Married,4,0,19,3,1,14,151
+C000536,60,Computer,2,44,E wallet,Male,2,1,Fashion,5,Single,4,0,24,2,1,1,172
+C000537,37,Mobile Phone,2,11,UPI,Male,1,4,Laptop & Accessory,1,Single,1,1,18,4,6,16,103
+C000538,33,Mobile Phone,1,43,Cash on Delivery,Male,2,3,Laptop & Accessory,1,Single,3,0,0,8,3,7,332
+C000539,8,Tablet,1,42,Cash on Delivery,Male,2,1,Grocery,1,Married,6,0,18,7,4,21,151
+C000540,53,Computer,1,25,Credit Card,Male,1,6,Others,1,Single,6,0,6,8,1,21,166
+C000541,60,Mobile Phone,1,24,Debit Card,Male,1,1,Mobile Phone,2,Single,7,0,28,4,8,25,153
+C000542,44,Computer,3,7,UPI,Female,3,5,Laptop & Accessory,5,Married,5,1,22,7,1,25,94
+C000543,44,Tablet,1,26,Cash on Delivery,Male,3,2,Laptop & Accessory,3,Married,7,1,10,3,5,8,163
+C000544,5,Computer,2,8,Credit Card,Female,1,4,Grocery,4,Married,3,0,4,4,6,20,392
+C000545,39,Mobile Phone,1,32,E wallet,Male,4,6,Others,1,Single,6,0,29,2,15,30,80
+C000546,4,Mobile Phone,1,16,Cash on Delivery,Female,4,6,Others,5,Married,5,0,16,4,2,19,213
+C000547,6,Computer,2,42,Credit Card,Female,2,3,Grocery,1,Single,7,0,10,2,7,30,238
+C000548,45,Mobile Phone,1,40,Debit Card,Female,5,1,Laptop & Accessory,1,Single,5,1,23,4,7,10,342
+C000549,32,Computer,1,45,Debit Card,Male,2,3,Mobile Phone,1,Married,4,0,25,10,1,5,244
+C000550,52,Mobile Phone,1,9,Cash on Delivery,Male,2,2,Laptop & Accessory,1,Single,2,0,7,4,4,23,341
+C000551,30,Mobile Phone,1,17,Cash on Delivery,Male,5,2,Others,1,Single,4,0,9,5,12,13,424
+C000552,47,Mobile Phone,3,27,UPI,Male,1,3,Laptop & Accessory,4,Single,1,0,11,8,13,0,310
+C000553,35,Mobile Phone,1,34,Credit Card,Female,4,4,Mobile Phone,5,Single,6,1,9,0,4,6,479
+C000554,55,Tablet,1,41,Cash on Delivery,Male,2,2,Fashion,1,Single,5,0,12,9,5,23,256
+C000555,40,Computer,2,29,UPI,Female,5,3,Laptop & Accessory,1,Divorced,7,0,25,5,1,8,101
+C000556,52,Computer,1,31,UPI,Female,3,1,Grocery,1,Single,2,0,17,0,1,10,98
+C000557,16,Mobile Phone,3,18,Cash on Delivery,Male,2,3,Fashion,1,Single,7,0,9,5,7,23,55
+C000558,13,Mobile Phone,2,40,Debit Card,Male,4,3,Grocery,2,Single,6,0,18,1,9,22,428
+C000559,50,Mobile Phone,2,43,Credit Card,Male,1,5,Grocery,2,Divorced,5,1,19,7,1,15,443
+C000560,60,Mobile Phone,2,20,Credit Card,Female,2,2,Grocery,3,Married,5,0,16,10,2,18,423
+C000561,42,Mobile Phone,1,26,Debit Card,Male,2,4,Laptop & Accessory,1,Single,4,0,19,2,6,1,273
+C000562,30,Mobile Phone,2,25,Cash on Delivery,Female,5,4,Others,3,Married,2,0,15,9,15,14,72
+C000563,19,Mobile Phone,1,25,Credit Card,Male,3,5,Fashion,4,Single,2,0,4,5,15,2,194
+C000564,17,Mobile Phone,3,12,Cash on Delivery,Female,3,6,Mobile Phone,3,Single,6,1,2,5,6,3,159
+C000565,56,Tablet,1,20,Cash on Delivery,Male,1,4,Others,5,Single,5,0,29,3,2,19,261
+C000566,19,Computer,2,35,UPI,Male,4,3,Laptop & Accessory,2,Single,2,0,26,4,9,21,349
+C000567,28,Mobile Phone,2,46,Debit Card,Female,1,5,Grocery,2,Single,2,0,14,1,4,27,90
+C000568,58,Mobile Phone,1,14,Cash on Delivery,Male,2,1,Mobile Phone,1,Married,7,0,25,9,13,6,448
+C000569,55,Computer,1,36,E wallet,Male,2,2,Fashion,1,Single,6,0,1,9,7,11,221
+C000570,26,Mobile Phone,2,38,Debit Card,Male,3,2,Others,4,Married,4,0,12,7,6,3,235
+C000571,37,Computer,3,13,Credit Card,Male,4,2,Others,4,Single,7,0,21,9,11,9,263
+C000572,26,Computer,1,21,UPI,Male,5,3,Mobile Phone,5,Single,7,0,7,6,13,5,355
+C000573,53,Mobile Phone,3,15,Credit Card,Male,4,1,Laptop & Accessory,1,Single,3,0,22,9,11,24,101
+C000574,23,Mobile Phone,3,36,Credit Card,Male,2,5,Fashion,1,Divorced,1,1,26,5,3,29,119
+C000575,9,Mobile Phone,3,14,Debit Card,Female,5,5,Mobile Phone,4,Single,3,0,29,6,8,21,245
+C000576,12,Mobile Phone,1,26,Credit Card,Female,4,2,Grocery,4,Married,2,0,16,0,7,13,496
+C000577,53,Mobile Phone,2,21,Cash on Delivery,Male,4,1,Fashion,4,Single,5,0,3,4,9,2,491
+C000578,1,Computer,1,8,Credit Card,Male,5,1,Others,2,Single,1,0,18,6,3,16,200
+C000579,58,Mobile Phone,3,29,UPI,Male,2,1,Mobile Phone,3,Single,1,0,21,0,1,10,477
+C000580,58,Mobile Phone,2,25,UPI,Female,4,4,Others,3,Single,5,0,24,1,2,9,158
+C000581,1,Computer,1,41,E wallet,Female,5,4,Others,1,Single,1,0,8,8,12,25,167
+C000582,47,Computer,2,42,UPI,Male,2,2,Others,2,Single,5,0,22,2,11,28,414
+C000583,34,Mobile Phone,1,5,Credit Card,Female,5,1,Laptop & Accessory,4,Married,1,0,14,5,15,20,144
+C000584,32,Mobile Phone,3,29,UPI,Male,5,6,Others,1,Single,7,0,27,6,12,9,305
+C000585,54,Mobile Phone,3,40,Debit Card,Male,4,1,Grocery,2,Married,6,0,8,8,1,9,93
+C000586,48,Mobile Phone,2,21,UPI,Male,2,5,Grocery,5,Single,6,0,23,4,11,2,485
+C000587,25,Mobile Phone,1,45,Cash on Delivery,Male,4,5,Fashion,2,Married,3,0,20,3,5,23,116
+C000588,40,Mobile Phone,2,28,Debit Card,Female,1,2,Others,1,Married,7,0,8,10,15,25,205
+C000589,45,Tablet,1,6,E wallet,Female,1,6,Others,3,Single,1,1,13,1,10,14,372
+C000590,53,Mobile Phone,1,44,Cash on Delivery,Male,2,1,Mobile Phone,4,Single,4,1,22,2,14,16,255
+C000591,1,Computer,3,19,Credit Card,Female,5,6,Laptop & Accessory,5,Married,5,0,20,4,2,26,323
+C000592,16,Tablet,1,36,Credit Card,Female,4,2,Fashion,2,Married,7,0,15,10,3,17,204
+C000593,39,Mobile Phone,1,43,Credit Card,Male,4,5,Others,1,Single,1,0,30,1,8,18,228
+C000594,5,Computer,3,10,Cash on Delivery,Female,2,5,Mobile Phone,1,Single,6,0,23,3,15,18,109
+C000595,22,Mobile Phone,1,5,Cash on Delivery,Male,2,4,Laptop & Accessory,4,Married,6,1,30,0,10,11,123
+C000596,29,Computer,1,27,Cash on Delivery,Male,1,2,Fashion,1,Single,5,0,22,3,14,23,98
+C000597,55,Mobile Phone,3,43,Debit Card,Male,3,2,Fashion,1,Married,4,0,24,6,5,4,320
+C000598,3,Mobile Phone,1,21,Debit Card,Male,2,1,Others,4,Single,1,0,25,2,4,23,122
+C000599,12,Mobile Phone,3,38,Credit Card,Female,3,1,Fashion,5,Single,1,0,16,9,5,26,245
+C000600,26,Computer,3,45,UPI,Male,2,4,Mobile Phone,3,Married,4,0,30,7,10,15,448
+C000601,16,Computer,3,33,Credit Card,Female,5,3,Fashion,3,Married,4,0,12,5,6,29,228
+C000602,51,Mobile Phone,2,13,E wallet,Male,5,6,Grocery,2,Single,4,0,8,5,12,14,97
+C000603,37,Computer,1,17,Debit Card,Male,1,3,Mobile Phone,5,Married,6,0,14,0,7,14,121
+C000604,22,Mobile Phone,1,10,Cash on Delivery,Female,1,3,Laptop & Accessory,2,Married,5,0,6,4,14,26,162
+C000605,57,Mobile Phone,3,10,Debit Card,Male,3,2,Laptop & Accessory,3,Married,7,0,0,2,13,5,294
+C000606,29,Mobile Phone,3,24,Cash on Delivery,Female,2,6,Others,4,Single,4,0,0,9,9,30,434
+C000607,14,Mobile Phone,2,7,E wallet,Female,4,2,Others,1,Married,5,0,4,0,1,11,440
+C000608,28,Mobile Phone,1,21,E wallet,Male,1,6,Grocery,3,Married,3,1,23,7,4,1,358
+C000609,5,Computer,1,16,Debit Card,Male,4,5,Laptop & Accessory,5,Married,1,0,8,6,12,26,208
+C000610,47,Mobile Phone,1,49,Cash on Delivery,Male,4,2,Laptop & Accessory,3,Married,1,0,11,6,12,19,323
+C000611,49,Mobile Phone,2,5,E wallet,Male,2,2,Laptop & Accessory,5,Single,2,0,5,9,9,8,317
+C000612,30,Mobile Phone,2,21,Credit Card,Male,3,2,Laptop & Accessory,5,Married,3,0,27,9,5,3,353
+C000613,46,Computer,3,7,Credit Card,Male,2,4,Fashion,5,Married,7,0,12,9,8,4,79
+C000614,52,Tablet,2,30,Cash on Delivery,Female,1,2,Mobile Phone,2,Single,4,0,25,3,12,20,146
+C000615,5,Mobile Phone,1,19,Debit Card,Female,4,1,Mobile Phone,4,Single,4,1,27,10,1,25,300
+C000616,12,Computer,2,40,E wallet,Male,2,1,Grocery,3,Single,7,0,7,5,4,7,56
+C000617,16,Mobile Phone,2,36,Debit Card,Female,2,6,Fashion,4,Married,6,1,14,8,12,21,141
+C000618,26,Computer,2,36,Credit Card,Female,2,5,Laptop & Accessory,1,Single,3,1,5,2,14,9,162
+C000619,26,Mobile Phone,2,8,E wallet,Male,1,4,Laptop & Accessory,3,Married,4,1,26,8,12,6,308
+C000620,48,Computer,3,22,Debit Card,Male,3,6,Others,4,Divorced,2,0,5,3,9,21,156
+C000621,21,Mobile Phone,3,23,UPI,Female,2,1,Others,4,Married,5,0,3,4,13,13,112
+C000622,39,Mobile Phone,1,47,Cash on Delivery,Male,1,4,Grocery,1,Divorced,1,0,10,6,1,29,439
+C000623,36,Computer,1,39,Cash on Delivery,Female,4,4,Laptop & Accessory,5,Divorced,3,0,20,5,1,29,407
+C000624,33,Mobile Phone,2,44,UPI,Male,5,5,Grocery,3,Single,1,0,29,9,4,4,320
+C000625,30,Mobile Phone,1,18,Credit Card,Female,1,4,Fashion,3,Married,5,0,17,7,14,15,248
+C000626,37,Mobile Phone,1,37,E wallet,Female,5,2,Mobile Phone,1,Single,3,0,2,7,3,14,476
+C000627,23,Mobile Phone,1,18,Cash on Delivery,Female,2,4,Laptop & Accessory,5,Married,5,1,2,7,7,4,396
+C000628,58,Mobile Phone,2,38,UPI,Female,2,5,Fashion,3,Single,4,0,29,2,11,2,386
+C000629,10,Mobile Phone,1,8,UPI,Male,1,6,Laptop & Accessory,3,Divorced,7,0,11,9,3,22,195
+C000630,54,Mobile Phone,2,28,Credit Card,Male,5,5,Others,3,Married,4,0,26,5,1,28,455
+C000631,5,Mobile Phone,3,33,Credit Card,Female,2,5,Grocery,5,Married,7,0,20,6,12,9,110
+C000632,36,Computer,1,23,Debit Card,Female,4,1,Others,1,Single,4,0,29,8,15,4,169
+C000633,34,Mobile Phone,1,10,Cash on Delivery,Male,3,2,Mobile Phone,3,Single,5,1,20,9,11,22,110
+C000634,52,Mobile Phone,1,37,Debit Card,Male,3,1,Others,4,Married,5,0,5,9,10,14,358
+C000635,31,Mobile Phone,3,44,UPI,Female,2,6,Laptop & Accessory,5,Single,5,0,20,3,2,17,75
+C000636,10,Mobile Phone,1,23,E wallet,Female,5,3,Others,2,Married,1,1,27,4,10,24,164
+C000637,58,Computer,1,5,E wallet,Female,2,6,Laptop & Accessory,1,Single,5,0,5,7,13,7,89
+C000638,19,Mobile Phone,1,9,Credit Card,Female,5,2,Mobile Phone,4,Married,4,0,7,0,4,30,393
+C000639,58,Mobile Phone,3,31,E wallet,Female,4,4,Others,3,Single,2,1,14,5,1,20,165
+C000640,32,Computer,2,20,E wallet,Male,5,5,Grocery,2,Married,5,0,17,3,1,1,185
+C000641,1,Computer,3,10,E wallet,Female,2,3,Grocery,1,Married,2,0,19,4,12,21,326
+C000642,56,Mobile Phone,3,44,UPI,Male,4,2,Grocery,5,Single,7,0,28,10,14,7,348
+C000643,5,Computer,1,17,E wallet,Male,1,1,Others,2,Single,4,0,15,4,8,22,70
+C000644,45,Computer,3,39,E wallet,Male,3,5,Others,2,Single,5,1,5,1,7,7,436
+C000645,4,Mobile Phone,1,23,E wallet,Female,2,6,Others,4,Married,1,0,27,7,14,3,80
+C000646,16,Computer,3,16,Debit Card,Male,2,1,Laptop & Accessory,1,Married,1,0,20,1,8,29,296
+C000647,24,Computer,2,20,UPI,Male,2,2,Mobile Phone,4,Married,7,1,16,3,13,18,460
+C000648,16,Mobile Phone,3,47,Credit Card,Male,4,2,Grocery,4,Married,2,1,8,4,4,22,76
+C000649,55,Mobile Phone,1,14,Debit Card,Male,1,6,Laptop & Accessory,3,Single,6,1,18,0,6,17,122
+C000650,2,Mobile Phone,1,29,Cash on Delivery,Female,5,3,Grocery,5,Single,1,0,17,5,15,29,490
+C000651,49,Computer,1,24,UPI,Female,1,6,Laptop & Accessory,2,Single,1,0,24,1,13,20,146
+C000652,28,Tablet,1,35,UPI,Male,4,4,Others,1,Single,1,0,22,4,3,28,210
+C000653,32,Mobile Phone,1,8,Cash on Delivery,Male,2,1,Grocery,5,Divorced,4,0,4,5,11,22,395
+C000654,27,Mobile Phone,1,48,Cash on Delivery,Female,3,3,Others,5,Married,1,0,27,10,13,0,349
+C000655,20,Mobile Phone,1,27,Cash on Delivery,Female,2,5,Grocery,1,Single,3,0,5,7,8,19,348
+C000656,24,Mobile Phone,2,6,Credit Card,Female,5,4,Fashion,5,Married,5,0,11,8,4,14,336
+C000657,12,Mobile Phone,3,26,E wallet,Male,3,3,Laptop & Accessory,3,Married,7,1,10,5,3,17,422
+C000658,50,Mobile Phone,2,41,UPI,Female,2,1,Fashion,5,Single,1,0,15,4,4,21,498
+C000659,35,Computer,1,12,E wallet,Male,3,2,Laptop & Accessory,3,Single,6,0,19,3,6,11,261
+C000660,60,Mobile Phone,2,11,E wallet,Male,1,5,Mobile Phone,2,Single,6,0,16,1,11,0,125
+C000661,33,Computer,1,18,Cash on Delivery,Female,4,6,Grocery,2,Married,1,0,19,1,7,6,450
+C000662,33,Mobile Phone,3,7,Credit Card,Male,2,1,Mobile Phone,4,Divorced,1,0,8,6,7,18,192
+C000663,51,Mobile Phone,1,20,Debit Card,Female,5,4,Mobile Phone,3,Married,3,0,0,4,14,27,83
+C000664,43,Mobile Phone,2,23,Credit Card,Male,1,4,Laptop & Accessory,2,Single,1,0,25,6,15,0,385
+C000665,37,Mobile Phone,3,22,E wallet,Female,2,2,Fashion,5,Single,1,0,2,10,12,30,53
+C000666,12,Computer,3,20,Credit Card,Male,1,2,Others,1,Married,5,0,30,0,4,23,377
+C000667,3,Mobile Phone,2,12,Cash on Delivery,Male,5,5,Laptop & Accessory,1,Married,6,0,30,0,8,6,147
+C000668,1,Computer,3,37,Debit Card,Female,2,6,Others,3,Married,3,0,20,4,7,1,415
+C000669,33,Mobile Phone,3,16,Cash on Delivery,Female,5,5,Mobile Phone,4,Married,6,0,22,1,2,6,266
+C000670,40,Computer,2,15,Debit Card,Female,3,2,Others,5,Single,3,0,8,7,13,18,77
+C000671,10,Mobile Phone,2,9,E wallet,Female,5,2,Fashion,3,Married,6,0,21,2,8,30,250
+C000672,43,Computer,2,31,Debit Card,Male,3,4,Laptop & Accessory,1,Married,1,0,18,0,9,12,435
+C000673,44,Computer,2,16,Debit Card,Female,2,2,Fashion,3,Single,6,0,12,1,5,24,322
+C000674,29,Mobile Phone,2,21,Debit Card,Female,3,3,Fashion,5,Married,6,1,22,9,15,23,363
+C000675,13,Mobile Phone,2,10,Credit Card,Male,2,1,Laptop & Accessory,2,Single,3,0,30,9,4,4,176
+C000676,12,Computer,1,37,Credit Card,Female,2,2,Fashion,5,Single,7,1,13,6,4,22,251
+C000677,31,Tablet,1,9,E wallet,Female,4,5,Grocery,2,Single,2,0,19,5,13,18,58
+C000678,46,Mobile Phone,1,32,Debit Card,Male,2,6,Grocery,2,Single,3,0,18,7,4,0,336
+C000679,2,Computer,1,18,UPI,Female,3,6,Grocery,2,Single,3,0,29,6,6,0,499
+C000680,51,Computer,1,9,E wallet,Female,4,6,Others,3,Single,3,0,22,9,11,30,137
+C000681,50,Computer,2,37,Debit Card,Female,4,3,Fashion,1,Married,4,0,26,7,4,26,367
+C000682,35,Tablet,1,45,Debit Card,Female,2,5,Laptop & Accessory,3,Married,7,0,26,2,7,17,68
+C000683,23,Computer,3,23,Credit Card,Female,5,3,Laptop & Accessory,1,Single,4,0,6,5,7,23,130
+C000684,17,Mobile Phone,1,26,E wallet,Female,5,2,Others,5,Single,4,0,3,6,5,0,156
+C000685,26,Mobile Phone,1,9,Debit Card,Male,4,1,Laptop & Accessory,4,Married,3,1,11,9,13,26,360
+C000686,8,Mobile Phone,2,6,Debit Card,Female,2,6,Grocery,5,Single,2,1,22,10,5,27,461
+C000687,29,Computer,2,34,E wallet,Male,5,5,Fashion,3,Single,3,0,26,0,15,4,279
+C000688,26,Computer,1,43,UPI,Male,2,6,Laptop & Accessory,3,Married,1,0,13,0,10,8,161
+C000689,10,Mobile Phone,3,8,E wallet,Male,2,3,Laptop & Accessory,1,Married,2,1,1,6,8,11,269
+C000690,26,Computer,3,37,E wallet,Male,4,4,Mobile Phone,3,Married,4,0,0,10,7,8,172
+C000691,34,Computer,1,17,UPI,Female,4,2,Mobile Phone,2,Married,6,0,27,2,14,17,293
+C000692,51,Mobile Phone,1,24,E wallet,Female,1,1,Mobile Phone,3,Single,6,1,30,2,7,22,227
+C000693,41,Mobile Phone,3,11,Debit Card,Female,5,2,Fashion,1,Married,7,0,17,4,6,10,114
+C000694,7,Mobile Phone,2,19,E wallet,Male,5,4,Grocery,1,Single,5,0,19,10,7,0,429
+C000695,4,Mobile Phone,2,27,UPI,Female,5,1,Grocery,2,Single,7,0,7,5,7,18,52
+C000696,58,Mobile Phone,3,18,Cash on Delivery,Female,3,4,Grocery,1,Single,2,0,2,1,10,21,256
+C000697,53,Mobile Phone,1,27,E wallet,Female,2,2,Fashion,4,Married,4,1,30,2,14,24,485
+C000698,50,Mobile Phone,2,23,Credit Card,Male,4,3,Fashion,5,Single,2,0,25,5,2,9,443
+C000699,45,Mobile Phone,1,33,Debit Card,Male,5,2,Mobile Phone,3,Divorced,2,1,30,2,14,1,70
+C000700,11,Mobile Phone,3,24,Debit Card,Female,1,2,Laptop & Accessory,4,Married,6,1,5,4,10,6,342
+C000701,29,Mobile Phone,2,33,Credit Card,Male,5,2,Others,3,Married,3,0,21,8,2,30,64
+C000702,56,Computer,2,28,Credit Card,Male,2,5,Others,4,Married,1,0,12,2,14,19,392
+C000703,36,Mobile Phone,1,22,E wallet,Female,2,4,Laptop & Accessory,3,Married,5,0,8,10,10,1,255
+C000704,25,Computer,1,14,Credit Card,Male,4,4,Mobile Phone,2,Married,4,0,8,5,7,18,251
+C000705,21,Tablet,2,45,Cash on Delivery,Male,3,6,Laptop & Accessory,1,Single,2,0,19,10,14,5,169
+C000706,57,Mobile Phone,2,12,UPI,Female,4,4,Laptop & Accessory,1,Married,5,0,8,4,10,9,186
+C000707,36,Mobile Phone,2,30,Credit Card,Male,5,6,Others,2,Married,2,0,30,4,7,8,349
+C000708,10,Mobile Phone,1,33,Credit Card,Male,1,5,Mobile Phone,4,Divorced,6,0,14,10,7,7,344
+C000709,37,Mobile Phone,3,14,Cash on Delivery,Male,4,3,Fashion,5,Married,1,0,12,5,5,25,438
+C000710,9,Mobile Phone,1,21,Debit Card,Male,3,6,Others,4,Married,6,1,21,5,1,29,74
+C000711,24,Mobile Phone,3,6,Debit Card,Male,4,2,Fashion,1,Married,5,0,15,0,14,10,361
+C000712,35,Mobile Phone,1,10,E wallet,Male,2,3,Mobile Phone,5,Married,4,1,1,10,2,8,283
+C000713,49,Mobile Phone,2,9,Cash on Delivery,Male,5,5,Laptop & Accessory,3,Married,2,0,25,8,13,19,170
+C000714,35,Mobile Phone,1,32,UPI,Male,5,4,Grocery,5,Single,1,0,13,4,9,27,139
+C000715,48,Mobile Phone,3,45,UPI,Female,5,6,Grocery,4,Married,6,0,26,0,8,19,369
+C000716,36,Mobile Phone,2,9,Cash on Delivery,Female,5,2,Mobile Phone,2,Divorced,5,0,5,7,8,30,249
+C000717,18,Mobile Phone,1,22,UPI,Female,5,1,Grocery,3,Married,6,0,1,6,10,8,229
+C000718,49,Mobile Phone,1,30,Debit Card,Female,5,1,Fashion,4,Married,2,0,7,6,1,7,394
+C000719,39,Tablet,1,24,UPI,Male,1,3,Grocery,3,Single,2,0,3,4,6,27,417
+C000720,32,Mobile Phone,1,45,UPI,Female,3,4,Mobile Phone,5,Married,4,0,20,0,15,14,125
+C000721,24,Mobile Phone,3,31,Cash on Delivery,Female,5,1,Mobile Phone,1,Married,1,0,23,8,15,1,186
+C000722,23,Mobile Phone,2,16,Cash on Delivery,Male,3,3,Fashion,4,Married,3,0,13,10,9,23,187
+C000723,32,Mobile Phone,3,11,UPI,Male,5,5,Grocery,2,Single,6,0,10,8,15,0,59
+C000724,37,Tablet,2,7,Credit Card,Male,4,3,Grocery,5,Married,2,0,23,7,8,8,250
+C000725,12,Computer,2,14,Cash on Delivery,Male,5,3,Laptop & Accessory,4,Married,5,1,27,4,3,8,367
+C000726,49,Mobile Phone,1,38,E wallet,Male,2,3,Others,2,Single,6,1,13,2,4,12,395
+C000727,55,Computer,1,29,E wallet,Female,1,2,Mobile Phone,4,Single,4,1,11,7,15,30,268
+C000728,13,Tablet,3,39,Debit Card,Male,4,3,Laptop & Accessory,5,Single,4,0,15,0,3,7,109
+C000729,23,Computer,3,20,UPI,Female,4,6,Mobile Phone,4,Married,2,0,5,2,6,26,196
+C000730,25,Computer,1,6,Credit Card,Female,2,3,Laptop & Accessory,3,Single,2,0,19,10,14,20,156
+C000731,35,Computer,1,28,Debit Card,Male,5,2,Others,5,Single,2,0,30,6,9,4,87
+C000732,41,Mobile Phone,2,14,UPI,Female,1,2,Laptop & Accessory,4,Married,7,1,0,3,15,28,183
+C000733,30,Mobile Phone,3,42,Cash on Delivery,Female,4,5,Mobile Phone,1,Single,3,0,11,6,8,2,448
+C000734,17,Mobile Phone,1,26,E wallet,Male,1,4,Grocery,4,Single,2,0,6,10,15,20,270
+C000735,49,Mobile Phone,2,30,Credit Card,Female,4,1,Mobile Phone,3,Married,6,0,7,4,15,3,352
+C000736,20,Mobile Phone,3,47,E wallet,Female,5,1,Fashion,2,Married,6,1,8,5,13,16,478
+C000737,48,Mobile Phone,1,43,Cash on Delivery,Female,4,3,Fashion,2,Married,7,0,1,6,10,15,182
+C000738,25,Mobile Phone,1,31,UPI,Male,4,5,Fashion,2,Single,7,0,16,9,4,15,383
+C000739,22,Computer,2,33,Cash on Delivery,Male,3,3,Fashion,1,Married,1,0,19,6,15,24,102
+C000740,13,Computer,3,42,Cash on Delivery,Male,5,1,Others,3,Married,5,0,12,6,2,30,499
+C000741,59,Mobile Phone,1,24,E wallet,Female,2,2,Grocery,5,Single,2,1,4,6,13,25,111
+C000742,19,Mobile Phone,2,31,Credit Card,Male,2,4,Grocery,2,Single,6,0,9,10,8,29,72
+C000743,49,Computer,2,45,Cash on Delivery,Female,5,5,Mobile Phone,3,Single,7,0,11,6,8,19,93
+C000744,36,Mobile Phone,2,24,E wallet,Male,2,2,Laptop & Accessory,4,Single,6,1,16,2,14,2,357
+C000745,12,Computer,2,48,Credit Card,Female,5,4,Mobile Phone,1,Married,6,0,20,2,12,5,95
+C000746,41,Mobile Phone,2,23,UPI,Male,2,5,Mobile Phone,3,Married,7,0,5,6,11,0,196
+C000747,19,Mobile Phone,2,24,UPI,Male,3,5,Mobile Phone,3,Single,3,0,2,1,6,20,265
+C000748,12,Tablet,2,39,Debit Card,Female,2,1,Mobile Phone,5,Single,7,0,27,1,14,15,389
+C000749,9,Mobile Phone,2,6,E wallet,Male,4,2,Grocery,3,Single,7,0,14,2,8,14,96
+C000750,7,Mobile Phone,2,34,Credit Card,Female,5,5,Laptop & Accessory,5,Married,5,0,6,3,9,6,396
+C000751,28,Computer,3,38,Cash on Delivery,Male,1,6,Mobile Phone,1,Single,7,1,29,5,13,1,357
+C000752,14,Mobile Phone,1,26,UPI,Male,1,5,Grocery,1,Married,4,0,5,7,1,9,73
+C000753,31,Mobile Phone,3,7,Credit Card,Female,5,4,Mobile Phone,4,Single,7,1,3,9,9,24,194
+C000754,52,Tablet,3,10,E wallet,Female,3,1,Fashion,5,Married,6,0,18,9,2,27,138
+C000755,19,Mobile Phone,1,19,Debit Card,Female,2,3,Mobile Phone,5,Married,2,0,4,6,14,14,223
+C000756,58,Computer,2,31,UPI,Male,3,1,Mobile Phone,2,Single,6,1,2,3,13,5,113
+C000757,47,Mobile Phone,2,14,Credit Card,Female,1,3,Others,2,Married,5,0,25,1,1,1,168
+C000758,16,Mobile Phone,1,13,Credit Card,Male,5,2,Fashion,4,Divorced,4,0,24,1,8,23,272
+C000759,53,Mobile Phone,1,37,Credit Card,Female,5,2,Laptop & Accessory,1,Single,7,0,8,3,8,23,205
+C000760,5,Mobile Phone,1,36,E wallet,Female,3,5,Mobile Phone,2,Married,3,0,5,5,11,16,227
+C000761,35,Computer,1,10,E wallet,Female,3,6,Laptop & Accessory,3,Single,1,0,12,2,4,27,369
+C000762,12,Computer,3,45,E wallet,Female,2,2,Fashion,1,Married,7,0,26,5,8,0,461
+C000763,25,Mobile Phone,1,40,Cash on Delivery,Female,4,5,Mobile Phone,3,Single,2,0,21,4,7,0,391
+C000764,52,Computer,3,6,Credit Card,Female,4,1,Others,5,Divorced,1,0,27,4,13,27,105
+C000765,59,Mobile Phone,2,33,UPI,Male,2,2,Grocery,1,Married,3,1,29,1,2,3,108
+C000766,21,Mobile Phone,3,8,E wallet,Female,4,1,Others,4,Married,5,1,19,7,5,19,438
+C000767,36,Mobile Phone,2,5,E wallet,Male,1,1,Others,5,Married,5,0,3,4,14,15,487
+C000768,53,Mobile Phone,1,23,Credit Card,Female,4,6,Grocery,5,Married,3,1,1,10,10,7,477
+C000769,23,Mobile Phone,2,30,E wallet,Female,2,2,Grocery,3,Single,6,0,25,1,4,0,475
+C000770,16,Computer,1,29,Cash on Delivery,Female,4,1,Grocery,5,Married,3,0,3,6,3,25,430
+C000771,57,Mobile Phone,2,14,Cash on Delivery,Male,5,6,Mobile Phone,2,Divorced,7,0,7,8,1,18,269
+C000772,39,Mobile Phone,3,19,E wallet,Male,3,6,Laptop & Accessory,1,Married,2,0,12,8,5,10,234
+C000773,45,Mobile Phone,1,26,Credit Card,Female,1,2,Laptop & Accessory,2,Divorced,4,0,9,0,10,16,96
+C000774,53,Mobile Phone,1,25,Credit Card,Male,5,6,Grocery,3,Married,7,0,17,6,8,24,426
+C000775,42,Computer,2,26,Credit Card,Female,5,2,Others,3,Married,7,0,8,8,12,9,458
+C000776,58,Mobile Phone,3,40,Debit Card,Female,2,2,Fashion,1,Married,7,0,29,5,9,11,151
+C000777,39,Mobile Phone,2,38,E wallet,Male,3,3,Grocery,5,Single,1,1,0,0,7,8,93
+C000778,14,Mobile Phone,1,34,Credit Card,Male,3,1,Others,4,Single,1,0,12,1,12,6,64
+C000779,31,Mobile Phone,2,29,Cash on Delivery,Male,1,4,Others,3,Single,5,0,17,3,11,28,285
+C000780,58,Mobile Phone,1,49,UPI,Male,2,2,Mobile Phone,1,Married,7,0,14,3,1,11,410
+C000781,5,Mobile Phone,2,32,UPI,Female,1,1,Mobile Phone,4,Single,6,0,1,1,1,14,100
+C000782,35,Computer,3,5,Credit Card,Male,4,6,Laptop & Accessory,5,Single,5,0,10,7,15,7,358
+C000783,23,Computer,2,49,UPI,Male,5,5,Laptop & Accessory,3,Divorced,2,0,28,1,1,16,83
+C000784,29,Mobile Phone,3,8,UPI,Female,1,2,Fashion,1,Single,3,0,30,2,2,4,173
+C000785,43,Mobile Phone,1,11,Debit Card,Male,5,6,Fashion,1,Married,1,1,13,3,1,30,126
+C000786,11,Mobile Phone,2,13,Cash on Delivery,Male,2,6,Fashion,1,Single,7,0,21,8,4,13,441
+C000787,18,Mobile Phone,3,40,Cash on Delivery,Male,4,6,Fashion,3,Single,2,1,14,9,10,1,172
+C000788,47,Mobile Phone,1,23,Debit Card,Male,2,6,Others,4,Married,5,1,13,0,9,15,254
+C000789,12,Mobile Phone,3,5,Debit Card,Female,4,6,Others,1,Married,5,0,15,7,12,28,277
+C000790,9,Mobile Phone,1,14,UPI,Female,4,2,Laptop & Accessory,5,Married,1,0,22,4,4,16,119
+C000791,10,Mobile Phone,2,40,E wallet,Male,5,4,Mobile Phone,1,Single,5,0,28,6,13,2,279
+C000792,58,Mobile Phone,3,13,UPI,Male,2,3,Mobile Phone,4,Married,6,0,14,7,4,22,70
+C000793,44,Mobile Phone,2,49,Debit Card,Female,2,6,Grocery,3,Single,5,0,30,4,7,0,157
+C000794,17,Mobile Phone,1,50,Cash on Delivery,Male,1,6,Others,1,Single,4,0,18,7,14,26,413
+C000795,38,Mobile Phone,2,46,UPI,Male,2,3,Fashion,1,Single,3,0,26,9,11,17,290
+C000796,7,Mobile Phone,2,36,E wallet,Male,1,2,Fashion,5,Single,5,1,8,10,9,17,300
+C000797,46,Computer,3,36,UPI,Male,3,1,Grocery,5,Single,4,0,4,7,7,3,184
+C000798,13,Mobile Phone,2,10,Credit Card,Male,3,5,Mobile Phone,1,Single,2,1,4,8,1,14,139
+C000799,40,Tablet,1,42,UPI,Male,3,5,Fashion,1,Divorced,5,0,10,1,1,27,128
+C000800,42,Mobile Phone,2,21,Debit Card,Male,2,1,Mobile Phone,5,Single,6,1,27,2,4,18,489
+C000801,9,Computer,2,14,Cash on Delivery,Male,2,2,Grocery,4,Single,2,0,19,0,4,18,226
+C000802,50,Mobile Phone,2,31,Cash on Delivery,Male,1,5,Mobile Phone,2,Single,7,0,24,3,1,9,347
+C000803,27,Computer,2,39,Debit Card,Female,4,3,Mobile Phone,2,Married,5,0,23,4,6,4,456
+C000804,58,Computer,3,25,Credit Card,Female,1,1,Mobile Phone,1,Single,1,0,27,10,10,18,357
+C000805,2,Mobile Phone,2,29,Debit Card,Female,3,4,Fashion,5,Married,4,0,3,0,2,10,151
+C000806,5,Mobile Phone,2,32,UPI,Male,1,2,Laptop & Accessory,3,Divorced,4,0,19,7,11,6,410
+C000807,29,Mobile Phone,1,19,Debit Card,Male,4,1,Others,3,Single,1,0,17,1,5,4,384
+C000808,37,Mobile Phone,1,8,Debit Card,Female,2,5,Mobile Phone,2,Married,3,0,24,0,8,19,161
+C000809,38,Mobile Phone,1,33,Credit Card,Male,1,2,Mobile Phone,4,Single,7,0,2,1,15,11,230
+C000810,19,Mobile Phone,1,13,UPI,Female,3,3,Mobile Phone,2,Married,6,0,3,4,3,18,153
+C000811,8,Mobile Phone,2,31,E wallet,Male,3,2,Laptop & Accessory,1,Single,4,0,13,8,9,14,65
+C000812,48,Mobile Phone,2,30,E wallet,Female,2,2,Grocery,4,Single,2,1,6,8,7,11,145
+C000813,45,Computer,2,23,Cash on Delivery,Female,1,3,Fashion,3,Single,6,0,25,1,9,3,342
+C000814,1,Mobile Phone,3,32,Debit Card,Female,4,6,Laptop & Accessory,5,Married,4,0,7,1,1,29,195
+C000815,22,Tablet,3,21,Cash on Delivery,Male,2,3,Mobile Phone,5,Single,7,1,23,2,5,30,453
+C000816,52,Mobile Phone,3,47,Credit Card,Female,1,2,Laptop & Accessory,1,Single,3,0,15,6,12,11,351
+C000817,17,Mobile Phone,2,45,E wallet,Male,5,3,Laptop & Accessory,2,Married,7,0,19,10,13,17,51
+C000818,7,Mobile Phone,2,46,Debit Card,Male,3,6,Laptop & Accessory,1,Married,2,0,14,2,3,16,168
+C000819,25,Mobile Phone,2,24,Credit Card,Male,4,1,Grocery,5,Married,7,0,6,0,4,18,392
+C000820,45,Computer,1,49,Credit Card,Male,4,3,Others,3,Single,6,0,25,5,4,15,143
+C000821,4,Mobile Phone,1,44,Debit Card,Male,4,3,Fashion,5,Married,2,0,16,2,11,10,240
+C000822,36,Computer,3,43,Credit Card,Male,3,2,Grocery,4,Married,1,0,21,0,12,1,52
+C000823,6,Mobile Phone,3,27,Debit Card,Male,1,1,Grocery,5,Single,5,0,21,3,7,15,479
+C000824,60,Mobile Phone,1,36,Debit Card,Female,2,4,Others,5,Married,1,0,21,0,10,0,160
+C000825,31,Mobile Phone,2,37,UPI,Female,1,4,Grocery,4,Single,6,1,11,0,11,16,226
+C000826,19,Mobile Phone,3,50,Cash on Delivery,Female,2,5,Laptop & Accessory,2,Divorced,5,0,17,1,8,17,306
+C000827,44,Mobile Phone,1,9,Credit Card,Male,4,3,Laptop & Accessory,5,Single,1,1,23,9,11,28,410
+C000828,54,Mobile Phone,1,47,Credit Card,Male,1,3,Mobile Phone,1,Married,5,1,13,7,10,28,71
+C000829,39,Mobile Phone,3,38,UPI,Male,4,1,Grocery,5,Single,4,0,14,1,5,24,447
+C000830,27,Mobile Phone,2,44,UPI,Male,5,6,Mobile Phone,1,Divorced,7,0,14,10,13,28,269
+C000831,10,Mobile Phone,1,15,UPI,Female,4,4,Fashion,4,Single,2,0,4,1,13,12,222
+C000832,26,Mobile Phone,2,7,E wallet,Male,4,5,Laptop & Accessory,5,Divorced,5,1,15,10,12,4,273
+C000833,19,Mobile Phone,3,37,E wallet,Female,2,1,Fashion,4,Divorced,4,0,4,10,10,24,439
+C000834,39,Mobile Phone,2,15,E wallet,Male,5,3,Others,4,Single,7,1,1,9,7,23,114
+C000835,3,Mobile Phone,1,20,Debit Card,Female,4,4,Laptop & Accessory,2,Married,7,0,19,9,3,28,326
+C000836,45,Mobile Phone,1,22,Credit Card,Male,4,5,Fashion,5,Divorced,3,0,27,7,3,26,298
+C000837,13,Mobile Phone,2,34,Cash on Delivery,Female,5,2,Others,1,Single,1,0,24,5,3,5,309
+C000838,50,Mobile Phone,2,14,Debit Card,Male,5,4,Fashion,1,Single,3,0,8,10,12,0,180
+C000839,28,Mobile Phone,3,22,Credit Card,Female,1,5,Others,5,Married,6,0,21,3,4,9,162
+C000840,58,Computer,1,42,Credit Card,Male,2,1,Others,2,Single,4,0,26,2,6,4,335
+C000841,20,Mobile Phone,3,23,UPI,Female,5,2,Laptop & Accessory,2,Single,3,0,30,0,15,27,336
+C000842,28,Mobile Phone,1,40,UPI,Female,5,5,Mobile Phone,2,Single,3,0,8,10,5,0,467
+C000843,8,Mobile Phone,1,17,Debit Card,Male,3,5,Others,1,Single,7,1,3,2,8,22,260
+C000844,41,Mobile Phone,1,50,UPI,Female,5,3,Others,4,Single,4,1,14,8,14,25,69
+C000845,39,Mobile Phone,1,7,Credit Card,Male,2,6,Laptop & Accessory,2,Single,7,0,10,4,14,29,264
+C000846,1,Mobile Phone,2,14,UPI,Male,4,4,Mobile Phone,1,Married,2,0,0,5,12,10,359
+C000847,3,Computer,2,42,E wallet,Male,4,3,Grocery,1,Married,5,0,17,4,13,23,300
+C000848,13,Mobile Phone,1,5,UPI,Female,4,2,Grocery,4,Single,6,0,28,0,5,23,431
+C000849,28,Mobile Phone,2,31,Credit Card,Female,4,6,Mobile Phone,5,Married,6,0,0,9,11,6,458
+C000850,57,Mobile Phone,1,50,Debit Card,Male,3,5,Fashion,5,Married,1,0,7,0,12,17,320
+C000851,60,Mobile Phone,3,12,Cash on Delivery,Male,5,3,Laptop & Accessory,2,Divorced,7,1,24,3,5,20,471
+C000852,49,Mobile Phone,3,50,UPI,Female,4,6,Mobile Phone,2,Single,5,1,15,2,14,19,456
+C000853,25,Mobile Phone,1,46,Credit Card,Female,1,4,Grocery,4,Single,1,0,25,10,10,20,229
+C000854,56,Mobile Phone,2,21,Cash on Delivery,Female,4,2,Others,2,Divorced,6,0,27,7,2,9,243
+C000855,33,Computer,1,13,Cash on Delivery,Male,5,1,Grocery,4,Divorced,5,0,21,6,12,24,490
+C000856,38,Mobile Phone,1,10,E wallet,Male,4,3,Others,1,Married,3,0,17,10,11,14,362
+C000857,53,Mobile Phone,1,47,Cash on Delivery,Male,3,2,Laptop & Accessory,2,Married,2,0,21,6,11,3,128
+C000858,6,Mobile Phone,3,29,Credit Card,Male,2,1,Others,1,Single,3,0,8,7,5,15,229
+C000859,58,Mobile Phone,2,43,Credit Card,Male,2,3,Mobile Phone,3,Married,2,0,11,9,15,14,212
+C000860,44,Mobile Phone,1,32,UPI,Female,5,2,Others,4,Single,7,1,18,6,12,14,251
+C000861,45,Mobile Phone,3,37,UPI,Male,2,2,Fashion,3,Single,4,0,24,9,7,11,63
+C000862,32,Computer,2,41,UPI,Female,2,6,Mobile Phone,2,Married,1,1,17,1,2,7,396
+C000863,45,Computer,3,13,Cash on Delivery,Female,1,3,Laptop & Accessory,1,Single,1,1,26,3,14,7,295
+C000864,47,Mobile Phone,2,22,Cash on Delivery,Male,5,2,Mobile Phone,2,Married,4,1,4,10,13,17,63
+C000865,21,Computer,2,25,E wallet,Female,5,5,Fashion,3,Divorced,5,0,26,5,6,29,148
+C000866,16,Mobile Phone,1,6,UPI,Male,2,3,Laptop & Accessory,2,Single,4,0,1,2,7,5,82
+C000867,54,Mobile Phone,1,47,Debit Card,Female,2,2,Grocery,5,Divorced,7,0,6,2,5,4,485
+C000868,21,Mobile Phone,3,42,E wallet,Male,2,6,Fashion,3,Divorced,6,0,26,5,9,1,306
+C000869,11,Tablet,1,44,Debit Card,Male,3,1,Laptop & Accessory,2,Married,4,0,9,0,14,11,83
+C000870,60,Mobile Phone,3,40,Cash on Delivery,Female,4,1,Others,1,Single,2,0,14,0,4,25,68
+C000871,37,Mobile Phone,2,47,E wallet,Male,3,5,Mobile Phone,2,Single,6,0,24,4,14,3,201
+C000872,36,Mobile Phone,1,41,E wallet,Female,5,3,Laptop & Accessory,1,Single,4,0,6,0,14,22,309
+C000873,35,Mobile Phone,1,19,Credit Card,Male,1,6,Mobile Phone,5,Single,1,1,27,9,13,12,213
+C000874,19,Mobile Phone,1,32,Cash on Delivery,Male,4,2,Others,2,Single,3,0,4,7,10,16,126
+C000875,20,Mobile Phone,3,22,Cash on Delivery,Male,1,2,Laptop & Accessory,5,Divorced,2,0,14,1,15,30,363
+C000876,57,Mobile Phone,2,38,E wallet,Female,5,1,Grocery,3,Single,7,0,19,5,1,15,465
+C000877,18,Mobile Phone,1,26,Cash on Delivery,Female,5,6,Fashion,1,Married,2,0,27,9,14,8,186
+C000878,47,Mobile Phone,1,15,E wallet,Male,1,5,Laptop & Accessory,3,Single,5,0,19,9,8,25,408
+C000879,41,Mobile Phone,1,17,Credit Card,Female,1,1,Others,1,Married,3,0,14,4,15,27,257
+C000880,49,Mobile Phone,2,8,E wallet,Male,1,1,Laptop & Accessory,5,Divorced,2,0,9,9,8,0,291
+C000881,14,Mobile Phone,1,26,Cash on Delivery,Female,5,5,Mobile Phone,4,Single,4,0,23,3,7,14,116
+C000882,15,Mobile Phone,3,11,Cash on Delivery,Female,2,3,Laptop & Accessory,2,Single,2,0,25,0,8,11,165
+C000883,31,Mobile Phone,1,47,E wallet,Male,1,2,Grocery,5,Married,2,0,28,2,2,4,453
+C000884,1,Mobile Phone,1,28,E wallet,Male,4,3,Laptop & Accessory,1,Married,2,0,25,3,3,22,251
+C000885,53,Tablet,2,8,E wallet,Male,5,6,Fashion,1,Married,5,0,13,1,9,23,425
+C000886,54,Mobile Phone,2,32,UPI,Male,3,4,Laptop & Accessory,1,Single,2,0,25,1,1,17,299
+C000887,54,Mobile Phone,3,19,Cash on Delivery,Male,3,4,Mobile Phone,1,Single,2,1,25,1,8,19,495
+C000888,3,Mobile Phone,2,5,Cash on Delivery,Female,4,4,Laptop & Accessory,2,Divorced,5,1,9,10,8,1,491
+C000889,16,Mobile Phone,1,7,UPI,Female,2,5,Grocery,3,Divorced,6,0,16,0,7,3,327
+C000890,23,Mobile Phone,2,18,E wallet,Male,1,1,Others,4,Married,3,0,20,9,13,14,161
+C000891,57,Mobile Phone,1,42,Credit Card,Male,5,3,Laptop & Accessory,2,Married,7,0,13,1,14,5,500
+C000892,11,Mobile Phone,1,5,E wallet,Male,1,2,Laptop & Accessory,1,Married,6,0,1,5,11,21,380
+C000893,12,Mobile Phone,3,42,E wallet,Female,5,4,Fashion,2,Single,1,0,15,2,5,11,283
+C000894,10,Computer,3,42,UPI,Male,3,3,Grocery,5,Single,5,0,12,9,4,28,225
+C000895,32,Computer,3,25,Cash on Delivery,Male,1,4,Others,1,Single,5,0,26,4,10,17,441
+C000896,16,Mobile Phone,2,33,E wallet,Female,4,4,Mobile Phone,4,Married,2,0,8,0,10,26,192
+C000897,8,Mobile Phone,2,9,Cash on Delivery,Female,2,2,Laptop & Accessory,1,Single,2,0,6,7,13,19,81
+C000898,38,Computer,1,14,Debit Card,Female,4,6,Others,4,Single,7,0,15,3,15,3,230
+C000899,12,Mobile Phone,1,32,Cash on Delivery,Female,2,6,Mobile Phone,4,Married,1,0,9,8,10,29,116
+C000900,24,Mobile Phone,3,25,Credit Card,Male,1,6,Grocery,3,Married,2,0,23,3,14,0,53
+C000901,28,Tablet,1,11,Credit Card,Female,1,5,Grocery,3,Married,4,0,21,1,10,14,335
+C000902,53,Mobile Phone,3,7,E wallet,Female,2,1,Others,2,Divorced,2,0,8,2,6,29,318
+C000903,8,Mobile Phone,2,49,Cash on Delivery,Male,3,5,Mobile Phone,2,Single,2,0,21,4,12,17,285
+C000904,58,Tablet,1,24,E wallet,Male,5,3,Grocery,4,Married,4,0,22,9,11,13,326
+C000905,28,Mobile Phone,2,23,UPI,Male,4,5,Others,1,Married,1,0,6,5,1,2,90
+C000906,36,Mobile Phone,2,39,Credit Card,Female,4,3,Grocery,5,Married,4,0,15,6,13,28,170
+C000907,26,Mobile Phone,1,8,E wallet,Male,4,3,Grocery,5,Single,5,0,8,3,5,14,324
+C000908,8,Computer,3,9,UPI,Female,1,1,Grocery,1,Single,4,0,26,6,14,26,280
+C000909,58,Computer,2,5,E wallet,Female,4,2,Fashion,1,Married,3,0,23,9,4,4,353
+C000910,60,Computer,1,8,Cash on Delivery,Female,5,1,Mobile Phone,3,Married,5,0,28,2,4,26,135
+C000911,50,Mobile Phone,2,16,Cash on Delivery,Male,5,6,Others,5,Married,2,1,16,6,7,23,112
+C000912,28,Computer,3,31,Cash on Delivery,Female,2,6,Others,4,Married,7,1,19,3,9,30,453
+C000913,28,Computer,1,46,Cash on Delivery,Male,1,5,Mobile Phone,2,Married,5,0,6,7,8,21,241
+C000914,37,Mobile Phone,3,27,Debit Card,Male,5,3,Mobile Phone,3,Married,1,1,10,8,11,2,342
+C000915,41,Computer,1,29,UPI,Male,3,4,Mobile Phone,5,Married,1,0,7,6,13,21,80
+C000916,36,Computer,3,25,UPI,Female,1,4,Mobile Phone,1,Single,4,0,6,7,14,6,379
+C000917,27,Mobile Phone,2,28,Cash on Delivery,Female,1,3,Laptop & Accessory,5,Married,5,0,27,7,12,5,195
+C000918,54,Mobile Phone,1,29,Debit Card,Female,5,1,Others,4,Married,2,1,18,1,8,25,156
+C000919,17,Mobile Phone,1,49,Cash on Delivery,Male,3,2,Laptop & Accessory,3,Single,1,0,30,8,5,21,408
+C000920,9,Mobile Phone,3,50,Debit Card,Female,2,1,Grocery,1,Single,6,1,19,5,6,0,159
+C000921,33,Mobile Phone,2,36,Cash on Delivery,Female,5,3,Grocery,4,Single,2,0,11,10,2,18,325
+C000922,53,Mobile Phone,2,36,Credit Card,Female,3,3,Others,2,Divorced,6,0,6,3,13,6,259
+C000923,20,Computer,1,9,Credit Card,Female,1,2,Grocery,3,Single,3,0,7,4,11,3,188
+C000924,13,Tablet,3,40,E wallet,Female,3,5,Mobile Phone,4,Married,6,0,6,9,14,11,135
+C000925,28,Computer,2,50,Cash on Delivery,Male,1,5,Laptop & Accessory,4,Single,1,0,5,4,3,19,93
+C000926,48,Mobile Phone,3,46,UPI,Male,5,2,Mobile Phone,1,Single,4,0,24,6,5,22,131
+C000927,29,Mobile Phone,1,46,E wallet,Male,5,5,Grocery,2,Married,3,0,8,8,2,24,113
+C000928,13,Mobile Phone,2,43,Credit Card,Male,4,4,Laptop & Accessory,4,Single,5,0,26,6,3,29,427
+C000929,46,Mobile Phone,2,20,Cash on Delivery,Female,4,5,Mobile Phone,3,Married,2,0,12,8,4,26,467
+C000930,35,Computer,1,37,E wallet,Male,4,5,Others,4,Married,1,1,6,3,6,28,392
+C000931,6,Computer,2,25,Cash on Delivery,Female,5,5,Mobile Phone,5,Married,3,0,7,9,5,28,370
+C000932,18,Mobile Phone,1,13,Credit Card,Male,2,4,Grocery,3,Single,3,0,21,9,10,30,104
+C000933,51,Computer,2,10,E wallet,Male,5,5,Laptop & Accessory,3,Married,1,0,16,3,4,17,123
+C000934,5,Computer,2,49,Credit Card,Male,3,6,Others,4,Married,5,0,16,5,13,8,422
+C000935,47,Mobile Phone,1,39,Debit Card,Female,5,4,Laptop & Accessory,1,Married,5,1,15,7,15,18,178
+C000936,25,Computer,2,43,Credit Card,Female,5,2,Others,3,Married,4,1,21,8,2,21,305
+C000937,2,Mobile Phone,2,26,Cash on Delivery,Male,1,1,Laptop & Accessory,5,Married,7,0,1,0,12,3,471
+C000938,10,Mobile Phone,1,45,UPI,Female,1,2,Grocery,1,Divorced,6,0,29,0,11,0,280
+C000939,56,Mobile Phone,3,9,Credit Card,Male,1,1,Others,1,Married,5,1,7,7,5,8,186
+C000940,30,Mobile Phone,3,46,UPI,Male,5,2,Fashion,1,Single,4,1,16,10,5,26,400
+C000941,50,Mobile Phone,2,27,Debit Card,Male,2,6,Laptop & Accessory,3,Single,6,1,12,6,11,14,450
+C000942,59,Mobile Phone,1,21,E wallet,Female,3,1,Laptop & Accessory,1,Single,3,1,17,8,7,21,404
+C000943,45,Mobile Phone,3,16,E wallet,Male,3,1,Mobile Phone,4,Single,1,0,23,10,1,7,161
+C000944,5,Mobile Phone,2,27,UPI,Male,2,3,Others,1,Single,5,0,27,2,4,14,357
+C000945,55,Mobile Phone,1,20,E wallet,Male,2,1,Fashion,5,Single,4,0,21,9,11,14,195
+C000946,56,Mobile Phone,2,7,Credit Card,Female,3,1,Grocery,2,Married,3,0,27,4,5,17,496
+C000947,33,Mobile Phone,2,34,UPI,Male,4,3,Mobile Phone,5,Single,5,0,9,2,8,6,82
+C000948,54,Mobile Phone,2,26,Cash on Delivery,Female,1,5,Fashion,3,Married,2,0,1,4,12,21,309
+C000949,1,Mobile Phone,2,13,Credit Card,Male,1,5,Others,1,Single,7,0,1,9,15,17,136
+C000950,18,Mobile Phone,2,33,Credit Card,Female,3,3,Fashion,1,Single,3,0,26,0,12,15,380
+C000951,32,Mobile Phone,3,41,Credit Card,Male,2,4,Laptop & Accessory,4,Single,5,0,13,10,8,1,485
+C000952,47,Mobile Phone,1,27,Cash on Delivery,Male,4,1,Laptop & Accessory,1,Single,3,0,15,3,1,3,314
+C000953,49,Computer,2,17,Debit Card,Female,3,1,Mobile Phone,5,Married,1,0,6,5,5,19,369
+C000954,11,Mobile Phone,3,36,E wallet,Female,1,3,Others,3,Married,1,1,20,1,10,15,79
+C000955,21,Mobile Phone,2,50,UPI,Male,5,3,Others,2,Single,7,1,20,6,1,2,441
+C000956,26,Tablet,2,27,Debit Card,Female,2,4,Fashion,1,Married,1,0,23,7,1,23,281
+C000957,25,Computer,2,49,UPI,Male,5,6,Mobile Phone,2,Married,6,0,11,0,2,29,438
+C000958,22,Computer,2,21,E wallet,Male,3,5,Others,1,Married,2,0,27,3,2,22,125
+C000959,59,Computer,3,44,Cash on Delivery,Male,1,2,Laptop & Accessory,3,Married,1,0,22,10,15,1,496
+C000960,27,Mobile Phone,2,25,Credit Card,Female,4,6,Fashion,5,Married,2,0,27,3,15,2,178
+C000961,49,Mobile Phone,3,6,Credit Card,Male,5,5,Grocery,3,Married,1,0,13,4,9,25,320
+C000962,13,Mobile Phone,1,41,Cash on Delivery,Female,4,1,Laptop & Accessory,2,Married,6,1,24,3,4,24,138
+C000963,33,Mobile Phone,1,10,Debit Card,Male,1,6,Mobile Phone,1,Single,3,0,3,8,3,28,471
+C000964,34,Mobile Phone,2,48,Debit Card,Female,5,3,Others,2,Single,5,0,25,6,11,4,219
+C000965,41,Mobile Phone,1,22,UPI,Female,4,4,Laptop & Accessory,5,Divorced,5,0,3,1,1,1,177
+C000966,35,Mobile Phone,1,34,Cash on Delivery,Male,4,5,Grocery,3,Married,1,0,17,0,12,18,223
+C000967,1,Computer,1,26,Debit Card,Female,5,4,Grocery,2,Married,5,0,2,8,2,23,486
+C000968,21,Computer,1,37,Cash on Delivery,Male,1,5,Mobile Phone,2,Married,1,1,0,0,6,19,75
+C000969,48,Mobile Phone,1,34,E wallet,Male,4,6,Laptop & Accessory,5,Single,1,0,16,5,9,29,110
+C000970,55,Computer,3,21,Credit Card,Male,3,1,Fashion,1,Married,7,0,6,1,5,1,428
+C000971,6,Mobile Phone,1,47,Credit Card,Male,5,2,Laptop & Accessory,2,Married,4,0,29,3,4,1,116
+C000972,28,Computer,2,36,Credit Card,Male,2,4,Grocery,5,Single,4,0,15,5,13,21,487
+C000973,17,Mobile Phone,3,46,Cash on Delivery,Female,2,4,Mobile Phone,1,Married,7,0,29,4,5,23,455
+C000974,5,Tablet,3,18,Cash on Delivery,Male,1,2,Mobile Phone,1,Married,4,0,4,10,9,22,75
+C000975,31,Mobile Phone,1,14,UPI,Female,3,4,Fashion,3,Single,2,0,18,5,12,19,132
+C000976,5,Mobile Phone,3,40,Credit Card,Female,4,4,Mobile Phone,5,Married,4,0,6,2,13,17,413
+C000977,38,Mobile Phone,2,38,UPI,Male,2,5,Mobile Phone,1,Single,1,1,13,4,7,24,416
+C000978,3,Mobile Phone,2,13,Credit Card,Female,1,5,Mobile Phone,3,Married,6,0,1,1,8,19,109
+C000979,53,Mobile Phone,2,46,UPI,Male,3,2,Mobile Phone,4,Single,6,0,2,6,15,24,88
+C000980,23,Mobile Phone,3,32,UPI,Female,3,1,Mobile Phone,5,Married,3,0,16,2,4,20,172
+C000981,37,Mobile Phone,1,15,E wallet,Female,1,6,Grocery,4,Married,4,0,15,0,11,13,341
+C000982,53,Mobile Phone,2,18,UPI,Female,1,6,Laptop & Accessory,1,Single,6,0,7,7,8,27,326
+C000983,37,Mobile Phone,2,43,Cash on Delivery,Male,4,4,Others,5,Divorced,4,0,17,7,6,14,474
+C000984,10,Computer,3,23,UPI,Female,1,1,Mobile Phone,3,Divorced,3,0,14,2,5,11,423
+C000985,10,Mobile Phone,3,19,Credit Card,Male,4,2,Others,1,Single,6,0,6,6,13,10,353
+C000986,19,Mobile Phone,1,32,UPI,Female,4,2,Others,5,Single,1,0,26,8,12,10,331
+C000987,17,Mobile Phone,3,28,Debit Card,Female,5,5,Grocery,5,Divorced,2,0,8,7,7,29,240
+C000988,21,Computer,1,12,Credit Card,Female,3,4,Mobile Phone,4,Divorced,7,0,5,2,6,6,341
+C000989,14,Mobile Phone,1,47,Debit Card,Female,3,3,Others,1,Single,7,0,17,1,3,11,201
+C000990,9,Tablet,1,13,Credit Card,Male,3,2,Mobile Phone,3,Single,7,1,17,9,5,15,433
+C000991,46,Computer,1,37,Cash on Delivery,Male,5,4,Fashion,3,Single,4,0,24,6,9,4,282
+C000992,1,Mobile Phone,2,37,Cash on Delivery,Female,4,1,Fashion,1,Divorced,6,0,25,6,7,30,454
+C000993,51,Mobile Phone,1,23,Cash on Delivery,Female,4,5,Fashion,1,Single,6,0,23,8,12,1,195
+C000994,45,Computer,1,7,Debit Card,Male,1,6,Others,2,Married,3,0,13,4,4,21,320
+C000995,13,Computer,3,14,E wallet,Male,5,1,Fashion,4,Married,1,0,13,3,7,15,384
+C000996,4,Mobile Phone,3,44,Credit Card,Male,1,2,Grocery,1,Single,5,1,13,7,5,22,183
+C000997,1,Mobile Phone,3,46,Cash on Delivery,Male,5,2,Grocery,1,Married,6,0,24,3,11,29,220
+C000998,49,Computer,3,5,Credit Card,Female,1,1,Others,2,Single,2,1,3,3,13,14,464
+C000999,40,Mobile Phone,2,33,Debit Card,Female,2,2,Mobile Phone,2,Married,3,0,3,1,15,10,77
+C001000,32,Computer,1,38,E wallet,Male,3,4,Laptop & Accessory,5,Single,6,0,14,0,2,28,185
