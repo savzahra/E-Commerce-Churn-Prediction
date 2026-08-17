@@ -1,0 +1,543 @@
+{% extends "base.html" %}
+{% set active_page = "predict" %}
+
+{% block title %}Predict{% endblock %}
+{% block page_title %}Predict{% endblock %}
+
+{% block extra_head %}
+<!-- Chart.js — dipakai manual.js untuk gauge chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<!--
+  ============================================================
+  PAGE HEADER
+  TODO FRONTEND
+  Section: Judul halaman Predict
+  ============================================================
+-->
+<div class="flex items-center justify-between mb-5">
+  <div>
+    <h1 style="font-size:16px;font-weight:600">Churn Prediction</h1>
+    <p class="text-sub text-sm" style="margin-top:2px">Upload CSV untuk prediksi batch atau isi form untuk prediksi single pelanggan</p>
+  </div>
+</div>
+
+<!--
+  ============================================================
+  TAB NAVIGATION
+  TODO FRONTEND
+  Komponen: Tab CSV / Manual Input
+  JANGAN UBAH:
+    id="tabCsvBtn"    — dipakai upload.js (switchTab)
+    id="tabManualBtn" — dipakai upload.js (switchTab)
+    onclick="switchTab('csv')" dan onclick="switchTab('manual')"
+  ============================================================
+-->
+<div class="tab-bar">
+  <!--
+    TODO UI: Desain tombol tab CSV Upload
+    Logic sudah ada di upload.js — jangan ubah id dan onclick
+  -->
+  <button class="tab-btn active" id="tabCsvBtn" onclick="switchTab('csv')">
+    <i data-lucide="file-spreadsheet"></i>
+    Upload CSV
+  </button>
+  <!--
+    TODO UI: Desain tombol tab Manual Input
+    Logic sudah ada di upload.js — jangan ubah id dan onclick
+  -->
+  <button class="tab-btn" id="tabManualBtn" onclick="switchTab('manual')">
+    <i data-lucide="pen-line"></i>
+    Input Manual
+  </button>
+</div>
+
+
+<!-- ================================================================
+     TAB 1: CSV UPLOAD
+     id="tabCsv" dikontrol upload.js (switchTab) — jangan ubah id
+     ================================================================ -->
+<div id="tabCsv">
+
+  <!--
+    TODO FRONTEND
+    Section: Upload File CSV
+    Endpoint: POST /api/predict/csv (multipart/form-data, field: file)
+    Response: { session_id, results: [...] }
+  -->
+  <div class="card mb-4">
+    <div class="card-header">
+      <span class="card-title">
+        <i data-lucide="upload-cloud"></i>
+        Upload File CSV
+      </span>
+      <!--
+        TODO UI: Desain tombol Download Template
+        Endpoint: GET /api/predict/template — jangan ubah href
+      -->
+      <a href="/api/predict/template" class="btn btn-ghost btn-sm">
+        <i data-lucide="download"></i>
+        Download Template
+      </a>
+    </div>
+    <div class="card-body">
+
+      <!--
+        TODO FRONTEND
+        Komponen: Upload Drop Zone
+        JANGAN UBAH:
+          id="uploadZone"  — drag-drop target di upload.js
+          id="csvFile"     — file input, onchange="handleFileSelect(event)"
+          id="uploadTitle" — teks diupdate processFile() di upload.js
+          id="uploadSubtitle" — teks subtitle
+          id="fileInfo"    — ditampilkan setelah file dipilih
+          id="fileName"    — nama file
+          id="fileRows"    — jumlah baris (jika ada)
+      -->
+      <div class="upload-zone" id="uploadZone" onclick="document.getElementById('csvFile').click()">
+        <input type="file" id="csvFile" accept=".csv" style="display:none" onchange="handleFileSelect(event)">
+        <div class="upload-icon">
+          <i data-lucide="file-up"></i>
+        </div>
+        <h3 id="uploadTitle">Drag &amp; drop atau klik untuk pilih file</h3>
+        <p id="uploadSubtitle" class="text-muted text-sm" style="margin-top:4px">Format CSV · 18 kolom · Maks 10 MB</p>
+        <div id="fileInfo" style="display:none;margin-top:12px">
+          <div class="file-chip">
+            <i data-lucide="file-text"></i>
+            <span id="fileName"></span>
+            <span id="fileRows" style="color:#555;opacity:0.8"></span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:16px;display:flex;align-items:center;gap:10px">
+        <!--
+          TODO UI: Desain tombol Jalankan Prediksi
+          Logic: runCsvPrediction() di upload.js — jangan ubah id dan onclick
+          Tombol disabled sampai file dipilih (dikelola upload.js)
+        -->
+        <button class="btn btn-primary" id="btnPredict" onclick="runCsvPrediction()" disabled>
+          <i data-lucide="zap"></i>
+          Jalankan Prediksi
+        </button>
+        <!--
+          TODO UI: Desain tombol Hapus File
+          Logic: clearFile() di upload.js — jangan ubah onclick
+        -->
+        <button class="btn btn-ghost btn-sm" onclick="clearFile()">
+          <i data-lucide="x"></i>
+          Hapus
+        </button>
+        <!-- id="csvStatus" dipakai upload.js untuk status message -->
+        <span id="csvStatus" class="text-sm text-muted"></span>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    ============================================================
+    CSV RESULT SECTION
+    id="csvResultSection" dikontrol upload.js — jangan ubah id.
+    Ditampilkan setelah prediksi CSV selesai.
+    ============================================================
+  -->
+  <div id="csvResultSection" style="display:none">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="table-2"></i>
+          Hasil Prediksi
+        </span>
+        <div style="display:flex;gap:8px">
+          <!--
+            TODO UI: Desain tombol Download CSV hasil
+            Logic: downloadResult() di upload.js — jangan ubah id dan onclick
+          -->
+          <button class="btn btn-ghost btn-sm" id="btnDownload" onclick="downloadResult()">
+            <i data-lucide="download"></i>
+            Download CSV
+          </button>
+          <!--
+            TODO UI: Desain tombol Lihat Semua
+            href dinamis (ditambahkan JS) — jangan ubah id
+          -->
+          <a href="/result" id="btnViewResult" class="btn btn-secondary btn-sm">
+            <i data-lucide="arrow-right"></i>
+            Lihat Semua
+          </a>
+        </div>
+      </div>
+
+      <div class="card-body">
+
+        <!--
+          TODO FRONTEND
+          Section: Quick Stats setelah CSV upload
+          JANGAN UBAH id berikut — diisi upload.js:
+            qsTotal, qsChurn, qsMedium, qsHigh
+        -->
+        <div class="quick-stats" id="quickStats">
+          <div class="qs-card">
+            <!-- id="qsTotal" diisi JS -->
+            <div class="qs-val" id="qsTotal">0</div>
+            <div class="qs-label">Total Baris</div>
+          </div>
+          <div class="qs-card">
+            <!-- id="qsChurn" diisi JS -->
+            <div class="qs-val" style="color:var(--high)" id="qsChurn">0</div>
+            <div class="qs-label">Churn</div>
+          </div>
+          <div class="qs-card">
+            <!-- id="qsMedium" diisi JS -->
+            <div class="qs-val" style="color:var(--medium)" id="qsMedium">0</div>
+            <div class="qs-label">Medium Risk</div>
+          </div>
+          <div class="qs-card">
+            <!-- id="qsHigh" diisi JS -->
+            <div class="qs-val" style="color:var(--high)" id="qsHigh">0</div>
+            <div class="qs-label">High Risk</div>
+          </div>
+        </div>
+
+        <!--
+          TODO FRONTEND
+          Section: Preview Table (10 baris pertama)
+          JANGAN UBAH:
+            id="previewTable"   — referensi tabel di upload.js
+            id="colCustId"      — header Customer ID, ditoggle upload.js
+            id="previewBody"    — tbody diisi render oleh upload.js
+            id="previewNote"    — teks catatan pagination
+        -->
+        <div class="table-wrapper">
+          <table class="data-table" id="previewTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th id="colCustId" style="display:none">Customer ID</th>
+                <th>Tenure</th>
+                <th>Gender</th>
+                <th>Marital</th>
+                <th>City Tier</th>
+                <th>Probabilitas</th>
+                <th>Risk Level</th>
+                <th>Label</th>
+              </tr>
+            </thead>
+            <tbody id="previewBody"></tbody>
+          </table>
+        </div>
+        <p class="text-xs text-muted" style="margin-top:10px;text-align:center" id="previewNote"></p>
+
+      </div>
+    </div>
+  </div>
+
+</div><!-- end #tabCsv -->
+
+
+<!-- ================================================================
+     TAB 2: MANUAL INPUT
+     id="tabManual" dikontrol upload.js (switchTab) — jangan ubah id.
+     ================================================================ -->
+<div id="tabManual" style="display:none">
+  <div style="display:grid;grid-template-columns:1fr 320px;gap:16px;align-items:start">
+
+    <!--
+      ============================================================
+      FORM: DATA PELANGGAN
+      TODO FRONTEND
+      Section: Form 18 fitur input manual
+      Endpoint: POST /api/predict/manual (JSON)
+      JANGAN UBAH:
+        id="manualForm"                  — onsubmit=runManualPrediction(event)
+        name attribute setiap input      — dipakai manual.js untuk build payload
+        onclick="fillSampleData()"       — tombol contoh data
+        onclick="clearManualResult()"    — tombol reset
+      ============================================================
+    -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="user-round"></i>
+          Data Pelanggan
+        </span>
+        <!--
+          TODO UI: Desain tombol Isi Contoh
+          Logic: fillSampleData() di manual.js — jangan ubah onclick
+        -->
+        <button class="btn btn-ghost btn-sm" onclick="fillSampleData()">
+          <i data-lucide="shuffle"></i>
+          Isi Contoh
+        </button>
+      </div>
+      <div class="card-body">
+
+        <!--
+          FORM — onsubmit dikelola manual.js
+          18 field sesuai schema CustomerInput (Pydantic)
+          Jangan ubah name attribute — payload dikirim ke POST /api/predict/manual
+        -->
+        <form id="manualForm" onsubmit="runManualPrediction(event)">
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label class="form-label">Tenure (bulan)</label>
+              <input class="form-input" type="number" name="Tenure" min="0" step="0.1" placeholder="10" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">City Tier</label>
+              <select class="form-select" name="CityTier" required>
+                <option value="">Pilih tier...</option>
+                <option value="1">1 — Kota Besar</option>
+                <option value="2">2 — Kota Sedang</option>
+                <option value="3">3 — Kota Kecil</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Jarak Gudang ke Rumah (km)</label>
+              <input class="form-input" type="number" name="WarehouseToHome" min="0" step="0.1" placeholder="15" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Gender</label>
+              <select class="form-select" name="Gender" required>
+                <option value="">Pilih...</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Preferred Login Device</label>
+              <select class="form-select" name="PreferredLoginDevice" required>
+                <option value="">Pilih...</option>
+                <option value="Mobile Phone">Mobile Phone</option>
+                <option value="Computer">Computer</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Payment Mode</label>
+              <select class="form-select" name="PreferredPaymentMode" required>
+                <option value="">Pilih...</option>
+                <option value="Debit Card">Debit Card</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="UPI">UPI</option>
+                <option value="E wallet">E wallet</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Jam di Aplikasi / Hari</label>
+              <input class="form-input" type="number" name="HourSpendOnApp" min="0" max="24" step="0.1" placeholder="3" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Jumlah Perangkat</label>
+              <input class="form-input" type="number" name="NumberOfDeviceRegistered" min="1" placeholder="3" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Kategori Produk Favorit</label>
+              <select class="form-select" name="PreferedOrderCat" required>
+                <option value="">Pilih...</option>
+                <option value="Laptop &amp; Accessory">Laptop &amp; Accessory</option>
+                <option value="Mobile Phone">Mobile Phone</option>
+                <option value="Fashion">Fashion</option>
+                <option value="Grocery">Grocery</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Satisfaction Score (1–5)</label>
+              <select class="form-select" name="SatisfactionScore" required>
+                <option value="">Pilih...</option>
+                <option value="1">1 — Sangat Tidak Puas</option>
+                <option value="2">2 — Tidak Puas</option>
+                <option value="3">3 — Netral</option>
+                <option value="4">4 — Puas</option>
+                <option value="5">5 — Sangat Puas</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Marital Status</label>
+              <select class="form-select" name="MaritalStatus" required>
+                <option value="">Pilih...</option>
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Jumlah Alamat</label>
+              <input class="form-input" type="number" name="NumberOfAddress" min="1" placeholder="3" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Pernah Komplain?</label>
+              <select class="form-select" name="Complain" required>
+                <option value="">Pilih...</option>
+                <option value="0">Tidak</option>
+                <option value="1">Ya</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Kenaikan Order YoY (%)</label>
+              <input class="form-input" type="number" name="OrderAmountHikeFromlastYear" min="0" step="0.1" placeholder="15" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Kupon Digunakan</label>
+              <input class="form-input" type="number" name="CouponUsed" min="0" step="0.1" placeholder="2" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Jumlah Order Bulan Ini</label>
+              <input class="form-input" type="number" name="OrderCount" min="0" step="0.1" placeholder="3" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Hari Sejak Order Terakhir</label>
+              <input class="form-input" type="number" name="DaySinceLastOrder" min="0" step="0.1" placeholder="5" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Cashback Amount (Rp)</label>
+              <input class="form-input" type="number" name="CashbackAmount" min="0" step="0.01" placeholder="180" required>
+            </div>
+
+          </div><!-- end .form-grid -->
+
+          <div style="margin-top:20px;display:flex;gap:8px">
+            <!--
+              TODO UI: Desain tombol Submit Prediksi
+              Logic: runManualPrediction() via onsubmit — jangan ubah type="submit"
+            -->
+            <button type="submit" class="btn btn-primary">
+              <i data-lucide="zap"></i>
+              Prediksi
+            </button>
+            <!--
+              TODO UI: Desain tombol Reset Form
+              Logic: reset() + clearManualResult() — jangan ubah onclick
+            -->
+            <button type="button" class="btn btn-ghost btn-sm" onclick="document.getElementById('manualForm').reset();clearManualResult()">
+              <i data-lucide="rotate-ccw"></i>
+              Reset
+            </button>
+          </div>
+
+        </form><!-- end #manualForm -->
+
+      </div>
+    </div><!-- end form card -->
+
+
+    <!--
+      ============================================================
+      RESULT PANEL (sticky sidebar kanan)
+      TODO FRONTEND
+      Section: Hasil Prediksi Manual
+      JANGAN UBAH id berikut — dikelola manual.js:
+        manualPlaceholder  — ditampilkan sebelum prediksi
+        manualResultCard   — ditampilkan setelah prediksi
+        gaugeChart         — canvas untuk gauge (150x150)
+        gaugePct           — teks persentase di tengah gauge
+        manualRiskBadge    — badge risk level
+        manualChurnLabel   — label Churn / Tidak Churn
+        manualProb         — teks probabilitas
+        manualInsight      — area insight teks
+      ============================================================
+    -->
+    <div style="position:sticky;top:calc(var(--navbar-h) + 24px)">
+
+      <!--
+        Placeholder — tampil sebelum ada hasil prediksi
+        id="manualPlaceholder" dikontrol manual.js
+      -->
+      <div class="card" id="manualPlaceholder" style="text-align:center;padding:48px 24px">
+        <div class="empty-icon" style="margin:0 auto 14px">
+          <i data-lucide="target"></i>
+        </div>
+        <p style="font-size:13px;font-weight:600">Hasil akan muncul di sini</p>
+        <p class="text-xs text-muted" style="margin-top:4px">Isi form dan klik Prediksi</p>
+      </div>
+
+      <!--
+        Result card — tampil setelah prediksi selesai
+        id="manualResultCard" dikontrol manual.js (display:none → block)
+      -->
+      <div class="card" id="manualResultCard" style="display:none">
+        <div class="card-header">
+          <span class="card-title">
+            <i data-lucide="bar-chart-horizontal"></i>
+            Hasil Prediksi
+          </span>
+        </div>
+        <div class="card-body" style="text-align:center">
+
+          <!--
+            TODO FRONTEND
+            Komponen: Gauge Chart
+            Canvas 150x150 — dirender manual.js via Chart.js (doughnut semi-circle)
+            JANGAN UBAH:
+              id="gaugeChart"  — canvas target renderGauge() di manual.js
+              id="gaugePct"    — teks probabilitas di tengah
+          -->
+          <div style="position:relative;width:150px;height:150px;margin:0 auto 16px">
+            <canvas id="gaugeChart" width="150" height="150"></canvas>
+            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">
+              <span style="font-size:20px;font-weight:700" id="gaugePct">—</span>
+              <span class="text-xs text-muted">probabilitas</span>
+            </div>
+          </div>
+
+          <!-- id="manualRiskBadge" diisi innerHTML oleh manual.js -->
+          <div id="manualRiskBadge" style="margin-bottom:12px"></div>
+          <!-- id="manualChurnLabel" diisi innerHTML oleh manual.js -->
+          <div id="manualChurnLabel" style="font-size:16px;font-weight:700;margin-bottom:4px"></div>
+          <!-- id="manualProb" diisi textContent oleh manual.js -->
+          <div id="manualProb" class="text-sm text-sub" style="margin-bottom:16px"></div>
+
+          <div class="divider"></div>
+
+          <!--
+            TODO FRONTEND
+            Section: Insight Teks
+            id="manualInsight" diisi innerHTML oleh generateInsight() di manual.js
+          -->
+          <div style="text-align:left;margin-top:14px" id="manualInsight">
+            <p class="text-sm text-sub" style="line-height:1.7"></p>
+          </div>
+
+        </div>
+      </div><!-- end #manualResultCard -->
+
+    </div><!-- end sticky wrapper -->
+
+  </div><!-- end grid -->
+</div><!-- end #tabManual -->
+
+{% endblock %}
+
+{% block scripts %}
+<!-- upload.js — logika CSV upload, tab switching, file handling -->
+<script src="/static/js/upload.js"></script>
+<!-- manual.js — logika manual form, gauge chart, insights -->
+<script src="/static/js/manual.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+  });
+</script>
+{% endblock %}

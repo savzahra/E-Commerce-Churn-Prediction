@@ -1,0 +1,407 @@
+{% extends "base.html" %}
+{% set active_page = "dashboard" %}
+
+{% block title %}Dashboard{% endblock %}
+{% block page_title %}Dashboard{% endblock %}
+
+{% block extra_head %}
+<!-- Chart.js — dipakai charts.js untuk render semua chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<!--
+  ============================================================
+  PAGE HEADER
+  TODO FRONTEND
+  Section: Judul halaman + tombol aksi
+  JANGAN UBAH onclick: resetFilters(), resetDashboard()
+  ============================================================
+-->
+<div class="flex items-center justify-between mb-5">
+  <div>
+    <h1 style="font-size:16px;font-weight:600">Prediction Insights</h1>
+    <p class="text-sub text-sm" style="margin-top:2px">Ringkasan dan visualisasi dari semua prediksi yang telah dilakukan</p>
+  </div>
+  <div style="display:flex;gap:8px">
+    <!--
+      TODO UI: Desain tombol Reset Filter
+      Logic: resetFilters() di charts.js — jangan ubah onclick
+    -->
+    <button class="btn btn-ghost btn-sm" onclick="resetFilters()">
+      <i data-lucide="filter-x"></i>
+      Reset filter
+    </button>
+    <!--
+      TODO UI: Desain tombol Reset Data (destructive action)
+      Logic: resetDashboard() di charts.js — jangan ubah onclick
+    -->
+    <button class="btn btn-danger btn-sm" onclick="resetDashboard()">
+      <i data-lucide="trash-2"></i>
+      Reset data
+    </button>
+  </div>
+</div>
+
+<!--
+  ============================================================
+  FILTER BAR
+  TODO FRONTEND
+  Section: Filter Global Dashboard
+  Data Source: Semua filter dikirim sebagai query params ke:
+    GET /api/insight/summary
+    GET /api/insight/charts
+  JANGAN UBAH id berikut — dipakai applyFilters() di charts.js:
+    filterGender, filterCityTier, filterMarital,
+    filterTenureMin, filterTenureMax
+  ============================================================
+-->
+<div class="filter-bar mb-4">
+  <div style="display:flex;align-items:center;gap:6px;color:#888;margin-right:4px">
+    <i data-lucide="sliders-horizontal" style="width:14px;height:14px"></i>
+    <span style="font-size:12px;font-weight:500">Filter</span>
+  </div>
+
+  <div class="filter-group">
+    <label>Gender</label>
+    <select class="filter-select" id="filterGender">
+      <option value="">Semua</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>City Tier</label>
+    <select class="filter-select" id="filterCityTier">
+      <option value="">Semua</option>
+      <option value="1">Tier 1</option>
+      <option value="2">Tier 2</option>
+      <option value="3">Tier 3</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>Marital Status</label>
+    <select class="filter-select" id="filterMarital">
+      <option value="">Semua</option>
+      <option value="Single">Single</option>
+      <option value="Married">Married</option>
+      <option value="Divorced">Divorced</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <label>Tenure Min</label>
+    <input type="number" class="filter-input" id="filterTenureMin" placeholder="0" min="0" style="width:80px">
+  </div>
+
+  <div class="filter-group">
+    <label>Tenure Max</label>
+    <input type="number" class="filter-input" id="filterTenureMax" placeholder="72" min="0" style="width:80px">
+  </div>
+
+  <!--
+    TODO UI: Desain tombol Terapkan Filter
+    Logic: applyFilters() di charts.js — jangan ubah onclick
+  -->
+  <button class="btn btn-primary btn-sm" onclick="applyFilters()">
+    <i data-lucide="search"></i>
+    Terapkan
+  </button>
+</div>
+
+<!--
+  ============================================================
+  SUMMARY CARDS
+  TODO FRONTEND
+  Section: Customer Summary Metrics (4 kartu)
+  Data Source: GET /api/insight/summary
+  Expected Fields: total_customers, total_churn, churn_rate, high_risk_count
+
+  JANGAN UBAH id berikut — dipakai loadSummary() di charts.js:
+    metricTotal, metricTotalSub, metricChurn, metricChurnSub,
+    metricChurnRate, metricHighRisk
+
+  Warna class (.purple, .red, .blue) dipakai template — boleh diganti
+  selama class tetap ada di CSS.
+  ============================================================
+-->
+<div class="metrics-grid">
+
+  <!-- CARD 1: Total Pelanggan -->
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">Total Pelanggan</span>
+      <div class="metric-icon-wrap purple">
+        <i data-lucide="users"></i>
+      </div>
+    </div>
+    <!-- id="metricTotal" diisi JS -->
+    <div class="metric-value purple" id="metricTotal">—</div>
+    <div class="metric-sub" id="metricTotalSub">Belum ada prediksi</div>
+  </div>
+
+  <!-- CARD 2: Total Churn -->
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">Total Churn</span>
+      <div class="metric-icon-wrap red">
+        <i data-lucide="user-x"></i>
+      </div>
+    </div>
+    <!-- id="metricChurn" diisi JS -->
+    <div class="metric-value red" id="metricChurn">—</div>
+    <div class="metric-sub" id="metricChurnSub">Pelanggan terdeteksi churn</div>
+  </div>
+
+  <!-- CARD 3: Churn Rate -->
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">Churn Rate</span>
+      <div class="metric-icon-wrap blue">
+        <i data-lucide="percent"></i>
+      </div>
+    </div>
+    <!-- id="metricChurnRate" diisi JS -->
+    <div class="metric-value blue" id="metricChurnRate">—</div>
+    <div class="metric-sub">Dari total pelanggan</div>
+  </div>
+
+  <!-- CARD 4: High Risk -->
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">High Risk</span>
+      <div class="metric-icon-wrap red">
+        <i data-lucide="shield-alert"></i>
+      </div>
+    </div>
+    <!-- id="metricHighRisk" diisi JS -->
+    <div class="metric-value red" id="metricHighRisk">—</div>
+    <div class="metric-sub">Probabilitas &ge; 70%</div>
+  </div>
+
+</div>
+
+<!--
+  ============================================================
+  EMPTY STATE
+  TODO FRONTEND
+  Tampil ketika belum ada data prediksi.
+  id="emptyState" dikontrol charts.js — jangan ubah.
+  ============================================================
+-->
+<div id="emptyState" style="display:none">
+  <div class="empty-state">
+    <div class="empty-icon">
+      <i data-lucide="bar-chart-2"></i>
+    </div>
+    <h3>Belum ada data prediksi</h3>
+    <p>Upload CSV atau prediksi manual di halaman <a href="/predict">Predict</a> untuk melihat insight di sini.</p>
+  </div>
+</div>
+
+<!--
+  ============================================================
+  CHART SECTION
+  id="chartSection" dikontrol charts.js (disembunyikan saat empty).
+  Jangan hapus id ini.
+  ============================================================
+-->
+<div id="chartSection">
+
+  <!--
+    ──────────────────────────────────────────────────────────
+    ROW 1: Distribusi Churn + Distribusi Probabilitas
+    ──────────────────────────────────────────────────────────
+  -->
+  <div class="chart-grid-2">
+
+    <!--
+      TODO FRONTEND
+      Chart 1: Distribusi Churn (Donut / Pie)
+      Data Source: GET /api/insight/charts → response.churn_distribution
+      Expected: { churn: N, non_churn: N }
+      JANGAN UBAH id berikut (dipakai charts.js):
+        chartDonut, donutPct, legendChurn, legendNonChurn, donutSubtitle
+    -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="pie-chart"></i>
+          Distribusi Churn
+        </span>
+        <span class="text-xs text-muted" id="donutSubtitle">Churn vs Non-Churn</span>
+      </div>
+      <div class="card-body" style="display:flex;align-items:center;gap:24px;padding:20px 24px">
+        <div style="width:180px;height:180px;position:relative;flex-shrink:0">
+          <!-- Canvas wajib ada untuk charts.js -->
+          <canvas id="chartDonut"></canvas>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none">
+            <span style="font-size:22px;font-weight:700;color:var(--text)" id="donutPct">—</span>
+            <span style="font-size:10px;color:var(--text-muted)">Churn Rate</span>
+          </div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--surface-2);border-radius:8px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--high);flex-shrink:0"></div>
+              <span class="text-sm text-sub">Churn</span>
+            </div>
+            <span style="font-size:15px;font-weight:700;color:var(--text)" id="legendChurn">—</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--surface-2);border-radius:8px">
+            <div style="display:flex;align-items:center;gap:8px">
+              <div style="width:8px;height:8px;border-radius:50%;background:var(--accent);flex-shrink:0"></div>
+              <span class="text-sm text-sub">Non-Churn</span>
+            </div>
+            <span style="font-size:15px;font-weight:700;color:var(--text)" id="legendNonChurn">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      TODO FRONTEND
+      Chart 2: Distribusi Probabilitas (Histogram / Line)
+      Data Source: GET /api/insight/charts → response.probability_distribution
+      Expected: { labels: [...], values: [...] }
+      JANGAN UBAH id: chartProbDist (dipakai charts.js)
+    -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="activity"></i>
+          Distribusi Probabilitas
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:188px">
+          <!-- Canvas wajib ada untuk charts.js -->
+          <canvas id="chartProbDist"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+    ──────────────────────────────────────────────────────────
+    ROW 2: Churn by Tenure + Churn by Kategori Produk
+    ──────────────────────────────────────────────────────────
+  -->
+  <div class="chart-grid-2">
+
+    <!--
+      TODO FRONTEND
+      Chart 3: Churn by Tenure Group (Stacked Bar)
+      Data Source: GET /api/insight/charts → response.tenure_groups
+      Expected: { labels: ['0-6','7-12','13-24','25+'], churn: [...], non_churn: [...] }
+      JANGAN UBAH id: chartTenure (dipakai charts.js)
+    -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="clock"></i>
+          Churn by Tenure Group
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:188px">
+          <!-- Canvas wajib ada untuk charts.js -->
+          <canvas id="chartTenure"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      TODO FRONTEND
+      Chart 4: Churn by Kategori Produk (Horizontal Bar)
+      Data Source: GET /api/insight/charts → response.category_churn
+      Expected: { labels: [...], churn_rates: [...] }
+      JANGAN UBAH id: chartCategory (dipakai charts.js)
+    -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="shopping-bag"></i>
+          Churn by Kategori Produk
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:188px">
+          <!-- Canvas wajib ada untuk charts.js -->
+          <canvas id="chartCategory"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--
+    ──────────────────────────────────────────────────────────
+    ROW 3: Churn by Marital Status + Churn by Payment Mode
+    ──────────────────────────────────────────────────────────
+  -->
+  <div class="chart-grid-2">
+
+    <!--
+      TODO FRONTEND
+      Chart 5: Churn by Marital Status (Grouped Bar)
+      Data Source: GET /api/insight/charts → response.marital_churn
+      Expected: { labels: ['Single','Married','Divorced'], churn: [...], non_churn: [...] }
+      JANGAN UBAH id: chartMarital (dipakai charts.js)
+    -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="heart"></i>
+          Churn by Marital Status
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:188px">
+          <!-- Canvas wajib ada untuk charts.js -->
+          <canvas id="chartMarital"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!--
+      TODO FRONTEND
+      Chart 6: Churn by Payment Mode (Bar)
+      Data Source: GET /api/insight/charts → response.payment_churn
+      Expected: { labels: [...], churn_rates: [...] }
+      JANGAN UBAH id: chartPayment (dipakai charts.js)
+    -->
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">
+          <i data-lucide="credit-card"></i>
+          Churn by Payment Mode
+        </span>
+      </div>
+      <div class="card-body">
+        <div class="chart-wrap" style="height:188px">
+          <!-- Canvas wajib ada untuk charts.js -->
+          <canvas id="chartPayment"></canvas>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- end #chartSection -->
+
+{% endblock %}
+
+{% block scripts %}
+<!-- charts.js — logika fetch data dan render chart. Jangan hapus. -->
+<script src="/static/js/charts.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    lucide.createIcons();
+  });
+</script>
+{% endblock %}

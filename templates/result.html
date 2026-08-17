@@ -1,0 +1,481 @@
+{% extends "base.html" %}
+{% set active_page = "result" %}
+
+{% block title %}Results{% endblock %}
+{% block page_title %}Results{% endblock %}
+
+{% block extra_head %}
+<!-- Chart.js — dipakai renderCharts() di inline script bawah -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<!--
+  ============================================================
+  PAGE HEADER
+  TODO FRONTEND
+  Section: Judul halaman Results + tombol aksi
+  JANGAN UBAH:
+    id="btnDownloadResult" — dipakai downloadResult() di inline script
+    onclick="downloadResult()"
+  ============================================================
+-->
+<div class="flex items-center justify-between mb-5">
+  <div>
+    <h1 style="font-size:16px;font-weight:600">Prediction Results</h1>
+    <p class="text-sub text-sm" style="margin-top:2px">Tabel hasil prediksi batch — sortable, searchable, filterable</p>
+  </div>
+  <div style="display:flex;gap:8px">
+    <!--
+      TODO UI: Desain tombol Download CSV
+      Logic: downloadResult() di inline script — jangan ubah id dan onclick
+      disabled dikelola JS setelah data loaded
+    -->
+    <button class="btn btn-ghost btn-sm" id="btnDownloadResult" onclick="downloadResult()" disabled>
+      <i data-lucide="download"></i>
+      Download CSV
+    </button>
+    <!--
+      TODO UI: Desain tombol Prediksi Baru
+    -->
+    <a href="/predict" class="btn btn-ghost btn-sm">
+      <i data-lucide="plus"></i>
+      Prediksi Baru
+    </a>
+  </div>
+</div>
+
+<!--
+  ============================================================
+  SUMMARY CARDS
+  TODO FRONTEND
+  Section: Metric Cards ringkasan batch
+  Data Source: Dihitung dari data lokal (allData) oleh renderSummary() di inline script
+  JANGAN UBAH id berikut — diisi JS:
+    rsTotalRows, rsChurnCount, rsChurnRate, rsHighRisk
+  ============================================================
+-->
+<div class="metrics-grid mb-4">
+
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">Total Rows</span>
+      <div class="metric-icon-wrap purple"><i data-lucide="rows-3"></i></div>
+    </div>
+    <!-- id="rsTotalRows" diisi JS -->
+    <div class="metric-value purple" id="rsTotalRows">—</div>
+    <div class="metric-sub">Data diprediksi</div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">Churn</span>
+      <div class="metric-icon-wrap red"><i data-lucide="user-x"></i></div>
+    </div>
+    <!-- id="rsChurnCount" diisi JS -->
+    <div class="metric-value red" id="rsChurnCount">—</div>
+    <div class="metric-sub">Terdeteksi churn</div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">Churn Rate</span>
+      <div class="metric-icon-wrap blue"><i data-lucide="percent"></i></div>
+    </div>
+    <!-- id="rsChurnRate" diisi JS -->
+    <div class="metric-value blue" id="rsChurnRate">—</div>
+    <div class="metric-sub">Dari total batch</div>
+  </div>
+
+  <div class="metric-card">
+    <div class="metric-head">
+      <span class="metric-label">High Risk</span>
+      <div class="metric-icon-wrap red"><i data-lucide="shield-alert"></i></div>
+    </div>
+    <!-- id="rsHighRisk" diisi JS -->
+    <div class="metric-value red" id="rsHighRisk">—</div>
+    <div class="metric-sub">Probabilitas &ge; 70%</div>
+  </div>
+
+</div>
+
+<!--
+  ============================================================
+  CHART SECTION
+  TODO FRONTEND
+  Section: Dua chart distribusi hasil batch
+  Data: Dihitung dari allData oleh renderCharts() di inline script
+  JANGAN UBAH id canvas:
+    resultDonut   — Donut chart Churn vs Non-Churn
+    resultRiskBar — Bar chart High/Medium/Low risk count
+  ============================================================
+-->
+<div class="chart-grid-2 mb-4">
+
+  <!--
+    TODO FRONTEND
+    Chart 1: Distribusi Prediksi (Donut)
+    id="resultDonut" — canvas untuk Chart.js doughnut
+  -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">
+        <i data-lucide="pie-chart"></i>
+        Distribusi Prediksi
+      </span>
+    </div>
+    <div class="card-body">
+      <div class="chart-placeholder">
+        <!-- Canvas wajib ada untuk inline script -->
+        <canvas id="resultDonut" style="display:none"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    TODO FRONTEND
+    Chart 2: Distribusi Risk Level (Bar)
+    id="resultRiskBar" — canvas untuk Chart.js bar
+  -->
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">
+        <i data-lucide="bar-chart-2"></i>
+        Distribusi Risk Level
+      </span>
+    </div>
+    <div class="card-body">
+      <div class="chart-placeholder">
+        <canvas id="resultRiskBar" style="display:none"></canvas>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--
+  ============================================================
+  DATA TABLE
+  TODO FRONTEND
+  Section: Tabel hasil prediksi (sortable, searchable, filterable, paginated)
+  JANGAN UBAH id berikut — dipakai inline script:
+    searchInput     — input pencarian, oninput="filterTable()"
+    riskFilter      — dropdown filter risk, onchange="filterTable()"
+    churnFilter     — dropdown filter label, onchange="filterTable()"
+    tableCountLabel — teks jumlah rows
+    thCustId        — header Customer ID (toggle visibility)
+    resultBody      — tbody diisi renderTable()
+    pagination      — container pagination diisi renderPagination()
+    sort_row_index, sort_Tenure, sort_churn_probability — indikator sort direction
+  ============================================================
+-->
+<div class="card">
+  <div class="card-header">
+    <span class="card-title">
+      <i data-lucide="table-2"></i>
+      Detail Prediksi
+    </span>
+    <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+      <!--
+        TODO UI: Desain search input
+        id="searchInput" dan oninput wajib dipertahankan
+      -->
+      <div class="search-wrap">
+        <i data-lucide="search"></i>
+        <input type="text" class="search-input" id="searchInput" placeholder="Cari..." oninput="filterTable()">
+      </div>
+      <!--
+        TODO UI: Desain filter dropdowns
+        id dan onchange wajib dipertahankan
+      -->
+      <select class="filter-select" id="riskFilter" onchange="filterTable()" style="height:32px;min-width:120px">
+        <option value="">Semua Risk</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+      <select class="filter-select" id="churnFilter" onchange="filterTable()" style="height:32px;min-width:120px">
+        <option value="">Semua Label</option>
+        <option value="1">Churn</option>
+        <option value="0">Non-Churn</option>
+      </select>
+      <!-- id="tableCountLabel" diisi JS -->
+      <span class="text-xs text-muted" id="tableCountLabel"></span>
+    </div>
+  </div>
+
+  <div style="padding:0">
+    <div class="table-wrapper">
+      <!--
+        TODO FRONTEND
+        Komponen: Tabel Data
+        JANGAN UBAH:
+          class="sortable" dan onclick sortTable() pada th
+          id="sort_row_index", id="sort_Tenure", id="sort_churn_probability"
+          id="thCustId" — visibility dikelola JS
+          id="resultBody" — tbody diisi renderTable()
+      -->
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th class="sortable" onclick="sortTable('row_index')"># <span id="sort_row_index"></span></th>
+            <th id="thCustId" style="display:none">Customer ID</th>
+            <th class="sortable" onclick="sortTable('Tenure')">Tenure <span id="sort_Tenure"></span></th>
+            <th>Gender</th>
+            <th>Marital</th>
+            <th>Tier</th>
+            <th>Kategori</th>
+            <th>Payment</th>
+            <th class="sortable" onclick="sortTable('churn_probability')">Probabilitas <span id="sort_churn_probability"></span></th>
+            <th>Risk</th>
+            <th>Label</th>
+          </tr>
+        </thead>
+        <tbody id="resultBody">
+          <!--
+            Default empty state — diganti JS saat data loaded.
+            Ditampilkan jika tidak ada sessionId di sessionStorage.
+          -->
+          <tr>
+            <td colspan="10">
+              <div class="empty-state">
+                <div class="empty-icon"><i data-lucide="folder-open"></i></div>
+                <h3>Belum ada hasil prediksi</h3>
+                <p>Upload CSV di halaman <a href="/predict">Predict</a> untuk melihat hasilnya di sini.</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- id="pagination" diisi renderPagination() di inline script -->
+    <div class="pagination" id="pagination"></div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block scripts %}
+<!--
+  ==============================================================
+  INLINE SCRIPT — JANGAN UBAH ISI SCRIPT INI
+  Berisi seluruh business logic halaman Results:
+    - Fetch data dari /api/predict/result/{sessionId}
+    - renderSummary(), renderCharts(), renderTable()
+    - filterTable(), sortTable(), renderPagination()
+    - downloadResult()
+  Hanya CSS/HTML di atas yang boleh dimodifikasi.
+  ==============================================================
+-->
+<script>
+const ROWS_PER_PAGE = 20;
+let allData = [], filteredData = [], currentPage = 1;
+let sortKey = 'row_index', sortDir = 1;
+let sessionId = null;
+let resultDonutChart = null, resultRiskChart = null;
+
+let hasCustomerId = false;
+
+document.addEventListener('DOMContentLoaded', async () => {
+  lucide.createIcons();
+  sessionId = sessionStorage.getItem('churnSessionId');
+
+  if (!sessionId) return; // empty state already shown by default
+
+  showLoading();
+  try {
+    const res = await fetch(`/api/predict/result/${sessionId}`);
+    if (!res.ok) {
+      showToast('Session tidak ditemukan atau sudah kedaluwarsa', 'error');
+      return;
+    }
+    const data = await res.json();
+    allData = data.results;
+    filteredData = [...allData];
+    hasCustomerId = allData.length > 0 && 'CustomerID' in allData[0];
+    const thCustId = document.getElementById('thCustId');
+    if (thCustId) thCustId.style.display = hasCustomerId ? '' : 'none';
+    renderSummary(allData);
+    renderCharts(allData);
+    renderTable();
+    document.getElementById('btnDownloadResult').disabled = false;
+  } catch (err) {
+    showToast('Gagal memuat data: ' + err.message, 'error');
+  } finally {
+    hideLoading();
+  }
+});
+
+function renderSummary(data) {
+  const total = data.length;
+  const churn = data.filter(r => r.churn_label === 1).length;
+  const high = data.filter(r => r.risk_level === 'High').length;
+  document.getElementById('rsTotalRows').textContent  = total.toLocaleString();
+  document.getElementById('rsChurnCount').textContent = churn.toLocaleString();
+  document.getElementById('rsChurnRate').textContent  = total ? (churn/total*100).toFixed(1)+'%' : '0%';
+  document.getElementById('rsHighRisk').textContent   = high.toLocaleString();
+}
+
+function renderCharts(data) {
+  const churn = data.filter(r => r.churn_label === 1).length;
+  const nonChurn = data.length - churn;
+  const high   = data.filter(r => r.risk_level === 'High').length;
+  const medium = data.filter(r => r.risk_level === 'Medium').length;
+  const low    = data.filter(r => r.risk_level === 'Low').length;
+
+  const tt = {
+    backgroundColor: 'rgba(22,27,34,0.95)',
+    borderColor: 'rgba(255,255,255,0.07)',
+    borderWidth: 1,
+    titleColor: '#e6edf3',
+    bodyColor: '#8b949e',
+    padding: 10,
+    cornerRadius: 6,
+  };
+
+  // Unhide canvases for rendering
+  document.getElementById('resultDonut').style.display = '';
+  document.getElementById('resultRiskBar').style.display = '';
+
+  if (resultDonutChart) resultDonutChart.destroy();
+  resultDonutChart = new Chart(document.getElementById('resultDonut').getContext('2d'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Churn', 'Non-Churn'],
+      datasets: [{
+        data: [churn, nonChurn],
+        backgroundColor: ['rgba(248,113,113,0.8)', 'rgba(52,211,153,0.7)'],
+        borderColor: ['#f87171', '#34d399'],
+        borderWidth: 2,
+        hoverOffset: 4,
+      }]
+    },
+    options: {
+      cutout: '65%',
+      plugins: { legend: { labels: { color: '#8b949e', font: { size: 11.5 } } }, tooltip: { ...tt } }
+    }
+  });
+
+  if (resultRiskChart) resultRiskChart.destroy();
+  resultRiskChart = new Chart(document.getElementById('resultRiskBar').getContext('2d'), {
+    type: 'bar',
+    data: {
+      labels: ['High Risk', 'Medium Risk', 'Low Risk'],
+      datasets: [{
+        data: [high, medium, low],
+        backgroundColor: ['rgba(248,113,113,0.7)', 'rgba(245,158,11,0.7)', 'rgba(16,185,129,0.7)'],
+        borderColor: ['#f87171', '#f59e0b', '#10b981'],
+        borderWidth: 1,
+        borderRadius: 5,
+      }]
+    },
+    options: {
+      plugins: { legend: { display: false }, tooltip: { ...tt } },
+      scales: {
+        x: { ticks: { color: '#8b949e', font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' } },
+        y: { ticks: { color: '#8b949e', font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.05)' } }
+      }
+    }
+  });
+}
+
+function filterTable() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const risk  = document.getElementById('riskFilter').value;
+  const churn = document.getElementById('churnFilter').value;
+  filteredData = allData.filter(r => {
+    const text = [r.row_index, r.Tenure, r.Gender, r.MaritalStatus, r.CityTier,
+      r.PreferedOrderCat, r.PreferredPaymentMode].join(' ').toLowerCase();
+    if (search && !text.includes(search)) return false;
+    if (risk  && r.risk_level !== risk)         return false;
+    if (churn !== '' && String(r.churn_label) !== churn) return false;
+    return true;
+  });
+  currentPage = 1;
+  renderTable();
+}
+
+function sortTable(key) {
+  if (sortKey === key) sortDir = -sortDir;
+  else { sortKey = key; sortDir = 1; }
+  document.querySelectorAll('[id^="sort_"]').forEach(el => el.textContent = '');
+  document.getElementById('sort_' + key).textContent = sortDir === 1 ? ' ↑' : ' ↓';
+  filteredData.sort((a, b) => (a[key] < b[key] ? -1 : a[key] > b[key] ? 1 : 0) * sortDir);
+  renderTable();
+}
+
+function renderTable() {
+  const tbody = document.getElementById('resultBody');
+  const start = (currentPage - 1) * ROWS_PER_PAGE;
+  const page  = filteredData.slice(start, start + ROWS_PER_PAGE);
+  document.getElementById('tableCountLabel').textContent = `${filteredData.length} rows`;
+
+  if (filteredData.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="10">
+      <div class="empty-state">
+        <div class="empty-icon"><i data-lucide="search-x"></i></div>
+        <h3>Tidak ada hasil</h3><p>Coba ubah filter pencarian.</p>
+      </div></td></tr>`;
+    document.getElementById('pagination').innerHTML = '';
+    lucide.createIcons();
+    return;
+  }
+
+  tbody.innerHTML = page.map(r => {
+    const pct = (r.churn_probability * 100).toFixed(1);
+    const barColor = r.risk_level === 'High' ? '#f87171' : r.risk_level === 'Medium' ? '#f59e0b' : '#10b981';
+    const cidCell = hasCustomerId
+      ? `<td style="font-family:monospace;font-size:12px;font-weight:600">${r.CustomerID ?? '—'}</td>`
+      : '';
+    return `<tr>
+      <td class="text-muted text-xs">${r.row_index}</td>
+      ${cidCell}
+      <td>${r.Tenure ?? '—'}</td>
+      <td>${r.Gender ?? '—'}</td>
+      <td>${r.MaritalStatus ?? '—'}</td>
+      <td>${r.CityTier ?? '—'}</td>
+      <td class="text-sub">${r.PreferedOrderCat ?? '—'}</td>
+      <td class="text-sub">${r.PreferredPaymentMode ?? '—'}</td>
+      <td>
+        <div class="prob-bar-wrapper">
+          <div class="prob-bar-bg"><div class="prob-bar-fill" style="width:${pct}%;background:${barColor}"></div></div>
+          <span class="prob-value">${pct}%</span>
+        </div>
+      </td>
+      <td><span class="risk-badge ${r.risk_level}">${r.risk_level}</span></td>
+      <td>
+        <span class="label-badge ${r.churn_label===1?'churn':'no-churn'}">
+          ${r.churn_label===1?'Churn':'Aman'}
+        </span>
+      </td>
+    </tr>`;
+  }).join('');
+
+  renderPagination();
+}
+
+function renderPagination() {
+  const total = Math.ceil(filteredData.length / ROWS_PER_PAGE);
+  const pag = document.getElementById('pagination');
+  if (total <= 1) { pag.innerHTML = ''; return; }
+
+  let html = `<button class="page-btn" ${currentPage===1?'disabled':''} onclick="goPage(${currentPage-1})">‹</button>`;
+  for (let i = 1; i <= total; i++) {
+    if (i===1 || i===total || Math.abs(i-currentPage)<=2)
+      html += `<button class="page-btn ${i===currentPage?'active':''}" onclick="goPage(${i})">${i}</button>`;
+    else if (Math.abs(i-currentPage)===3)
+      html += `<span style="color:var(--text-muted);padding:0 2px">…</span>`;
+  }
+  html += `<button class="page-btn" ${currentPage===total?'disabled':''} onclick="goPage(${currentPage+1})">›</button>`;
+  pag.innerHTML = html;
+}
+
+function goPage(p) { currentPage = p; renderTable(); }
+
+function downloadResult() {
+  if (!sessionId) { showToast('Tidak ada session aktif', 'error'); return; }
+  window.location.href = `/api/predict/download/${sessionId}`;
+}
+</script>
+{% endblock %}

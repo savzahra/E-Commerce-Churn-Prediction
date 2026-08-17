@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}ChurnAI{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/dashboard.css" />
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+
+<!--
+  ============================================================
+  SIDEBAR
+  TODO FRONTEND: Desain ulang seluruh tampilan sidebar.
+  JANGAN UBAH:
+    - href pada setiap nav-link
+    - class "active" (dikelola Jinja2 via active_page)
+    - struktur <nav> dan <a> tag
+  ============================================================
+-->
+<aside class="sidebar">
+  <div class="sidebar-header">
+    <div class="logo-mark">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+    </div>
+    <span class="logo-name">Churn<span>AI</span></span>
+  </div>
+
+  <nav class="sidebar-nav">
+    <span class="nav-section-label">Menu</span>
+
+    <a href="/" class="nav-link {% if active_page == 'dashboard' %}active{% endif %}">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+          <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+        </svg>
+      </span>
+      Dashboard
+    </a>
+
+    <a href="/predict" class="nav-link {% if active_page == 'predict' %}active{% endif %}">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+        </svg>
+      </span>
+      Predict
+    </a>
+
+    <a href="/result" class="nav-link {% if active_page == 'result' %}active{% endif %}">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><line x1="10" y1="9" x2="8" y2="9"/>
+        </svg>
+      </span>
+      Results
+    </a>
+
+    <span class="nav-section-label" style="margin-top:8px">Developer</span>
+
+    <a href="/docs" target="_blank" class="nav-link">
+      <span class="nav-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        </svg>
+      </span>
+      API Docs
+    </a>
+  </nav>
+
+  <!--
+    TODO FRONTEND
+    Area: Sidebar Footer
+    Ganti konten sesuai kebutuhan (user info, branding, dll).
+  -->
+  <div class="sidebar-footer">
+    <div style="padding:8px 10px">
+      <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:2px">Created by</div>
+      <div style="font-size:12px;font-weight:700">One Percent Club</div>
+    </div>
+  </div>
+</aside>
+
+<!--
+  ============================================================
+  MAIN WRAPPER
+  TODO FRONTEND: Desain ulang navbar dan layout utama.
+  JANGAN UBAH: struktur div.main-wrapper dan div.page-content
+  ============================================================
+-->
+<div class="main-wrapper">
+
+  <!--
+    NAVBAR
+    TODO FRONTEND: Desain ulang navbar.
+    JANGAN UBAH: class .navbar (dipakai CSS layout)
+  -->
+  <nav class="navbar">
+    <div class="breadcrumb">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      </svg>
+      <span class="breadcrumb-sep">ChurnAI</span>
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="breadcrumb-sep">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+      <span class="crumb-active">{% block page_title %}Dashboard{% endblock %}</span>
+    </div>
+    <div class="navbar-right">
+      <!--
+        TODO FRONTEND
+        Komponen: Model Info Tag
+        Teks "XGBoost · F1 96.83%" bisa diganti setelah MODEL_ENABLED = True.
+      -->
+      <div class="model-tag">
+        <span class="dot"></span>
+        LightGBM · F1 98.4%
+      </div>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    {% block content %}{% endblock %}
+  </main>
+</div>
+
+<!--
+  ============================================================
+  TOAST CONTAINER
+  JANGAN HAPUS — dipakai showToast() di bawah.
+  id="toast-container" wajib ada.
+  ============================================================
+-->
+<div id="toast-container"></div>
+
+<!--
+  ============================================================
+  CUSTOM CONFIRM MODAL
+  JANGAN HAPUS — dipakai showConfirm() di bawah.
+  IDs yang wajib ada:
+    confirmModal, confirmBackdrop, confirmTitle,
+    confirmDesc, confirmOk, confirmCancel
+  ============================================================
+-->
+<div id="confirmModal" style="display:none;position:fixed;inset:0;z-index:1000;align-items:center;justify-content:center">
+  <div id="confirmBackdrop" style="position:absolute;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px)"></div>
+  <div style="position:relative;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:28px;width:100%;max-width:380px;margin:16px;box-shadow:0 24px 64px rgba(0,0,0,0.7)">
+    <div style="width:42px;height:42px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;background:rgba(224,82,82,0.12);color:var(--high)">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6"/><path d="M10 11v6"/><path d="M14 11v6"/><path d="M9 6V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+      </svg>
+    </div>
+    <h3 id="confirmTitle" style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px"></h3>
+    <p id="confirmDesc" style="font-size:13px;color:var(--text-sub);line-height:1.6;margin-bottom:24px"></p>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button id="confirmCancel" class="btn btn-ghost btn-sm">Batal</button>
+      <button id="confirmOk" class="btn btn-danger btn-sm">Hapus</button>
+    </div>
+  </div>
+</div>
+
+<!-- LUCIDE ICONS — dipakai lucide.createIcons() di setiap halaman -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+<script>
+  // ── Toast ─────────────────────────────────────────────────
+  // JANGAN HAPUS — dipanggil dari seluruh halaman.
+  function showToast(message, type = 'success', duration = 3500) {
+    const container = document.getElementById('toast-container');
+    const icons = {
+      success: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>',
+      error:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>',
+      info:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>',
+    };
+    const toast = document.createElement('div');
+    toast.className = `toast ${type}`;
+    toast.innerHTML = `${icons[type] || icons.info}<span>${message}</span>`;
+    container.appendChild(toast);
+    setTimeout(() => toast.remove(), duration);
+  }
+
+  // ── Loading ───────────────────────────────────────────────
+  // JANGAN HAPUS — dipanggil upload.js dan manual.js.
+  function showLoading() {
+    if (document.getElementById('loading-overlay')) return;
+    const overlay = document.createElement('div');
+    overlay.className = 'loading-overlay';
+    overlay.id = 'loading-overlay';
+    overlay.innerHTML = '<div class="spinner"></div>';
+    document.body.appendChild(overlay);
+  }
+
+  function hideLoading() {
+    const el = document.getElementById('loading-overlay');
+    if (el) el.remove();
+  }
+
+  // ── Custom Confirm Modal ──────────────────────────────────
+  // JANGAN HAPUS — dipanggil charts.js (resetDashboard).
+  function showConfirm({ title, description, confirmLabel = 'Hapus', onConfirm }) {
+    const modal    = document.getElementById('confirmModal');
+    const backdrop = document.getElementById('confirmBackdrop');
+    document.getElementById('confirmTitle').textContent = title;
+    document.getElementById('confirmDesc').textContent  = description;
+    document.getElementById('confirmOk').textContent    = confirmLabel;
+    modal.style.display = 'flex';
+
+    const close = () => { modal.style.display = 'none'; };
+    const ok    = () => { close(); onConfirm(); };
+
+    document.getElementById('confirmOk').onclick     = ok;
+    document.getElementById('confirmCancel').onclick = close;
+    backdrop.onclick = close;
+  }
+</script>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>
